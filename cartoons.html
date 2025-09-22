@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartoons - MyFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Стили только для этой страницы */
+    .cartoon-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .cartoon-card {
+      display: flex;
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .cartoon-card img {
+      width: 200px;
+      height: 300px;
+      object-fit: cover;
+    }
+    .cartoon-info {
+      padding: 15px;
+      flex: 1;
+    }
+    .cartoon-info h3 {
+      margin: 0 0 10px;
+      color: red;
+    }
+    .cartoon-info p {
+      margin: 5px 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1 class="logo">MyFlix</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="series.html">Series</a></li>
+        <li><a href="cartoons.html">Cartoons</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cartoons List -->
+  <section>
+    <h2>Popular Cartoons</h2>
+    <div class="cartoon-list">
+
+      <!-- SpongeBob -->
+      <div class="cartoon-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8osYPFkoJ43Ej9K_h3vobKzc-y40s0UqU1w&s" alt="SpongeBob SquarePants">
+        <div class="cartoon-info">
+          <h3>SpongeBob SquarePants</h3>
+          <p><strong>Years:</strong> 1999 – present</p>
+          <p><strong>Voices:</strong> Tom Kenny, Bill Fagerbakke, Clancy Brown</p>
+          <p>Adventures of SpongeBob and his friends in the underwater city of Bikini Bottom.</p>
+        </div>
+      </div>
+
+      <!-- Tom and Jerry -->
+      <div class="cartoon-card">
+        <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14279_p_v10_aa.jpg" alt="Tom and Jerry">
+        <div class="cartoon-info">
+          <h3>Tom and Jerry</h3>
+          <p><strong>Years:</strong> 1940 – present</p>
+          <p><strong>Creators:</strong> William Hanna, Joseph Barbera</p>
+          <p>A classic animated rivalry between a mischievous mouse and a clumsy cat.</p>
+        </div>
+      </div>
+
+      <!-- Gravity Falls -->
+      <div class="cartoon-card">
+        <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9248224_b_v8_ax.jpg" alt="Gravity Falls">
+        <div class="cartoon-info">
+          <h3>Gravity Falls</h3>
+          <p><strong>Years:</strong> 2012 – 2016</p>
+          <p><strong>Voices:</strong> Jason Ritter, Kristen Schaal, Alex Hirsch</p>
+          <p>Dipper and Mabel spend their summer in Gravity Falls, uncovering mysteries and supernatural secrets.</p>
+        </div>
+      </div>
+
+      <!-- Avatar: The Last Airbender -->
+      <div class="cartoon-card">
+        <img src="https://m.media-amazon.com/images/I/61Wps+FMG-L._UF1000,1000_QL80_.jpg" alt="Avatar: The Last Airbender">
+        <div class="cartoon-info">
+          <h3>Avatar: The Last Airbender</h3>
+          <p><strong>Years:</strong> 2005 – 2008</p>
+          <p><strong>Voices:</strong> Zach Tyler Eisen, Mae Whitman, Jack De Sena</p>
+          <p>Aang, the last Airbender, must master the four elements to bring peace to the world.</p>
+        </div>
+      </div>
+
+
+      <div class="cartoon-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg" alt="Rick and Morty">
+        <div class="cartoon-info">
+          <h3>Rick and Morty</h3>
+          <p><strong>Years:</strong> 2013 – present</p>
+          <p><strong>Voices:</strong> Justin Roiland, Chris Parnell, Spencer Grammer</p>
+          <p>A mad scientist and his grandson embark on chaotic adventures across dimensions.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; Gropemambers: Alua Sagyndyk, Bolatova Altynay, Dovletbayeva Farida  2025 MyFlix</p>
+  </footer>
+
+</body>
+</html>
