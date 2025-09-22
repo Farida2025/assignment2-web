@@ -22,6 +22,7 @@ nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 20px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -64,4 +65,9 @@ footer {
   padding: 15px;
   background: #000;
   margin-top: 30px;
+}
+
+#main-banner {
+  background-color: #333; 
+  padding: 50px 30px;
 }
