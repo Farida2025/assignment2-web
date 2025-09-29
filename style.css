@@ -22,7 +22,6 @@ nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 20px;
-  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -65,60 +64,4 @@ footer {
   padding: 15px;
   background: #000;
   margin-top: 30px;
-}
-
-#main-banner {
-  background-color: #333; 
-  padding: 50px 30px;
-}
-
-/* Стили для формы */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.contact-form .form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form label {
-  font-size: 14px;
-  color: #fff;
-  margin-bottom: 5px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #444;
-  background: #333;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: red;
-}
-
-.submit-button {
-  padding: 12px;
-  background-color: red;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-  background-color: #e00; 
 }
