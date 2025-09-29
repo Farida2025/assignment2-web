@@ -1,133 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Movies - MyFlix</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .movies-list {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      padding: 20px;
-    }
-    .movie-card {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-    .movie-card img {
-      width: 150px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .movie-card div {
-      max-width: 700px;
-    }
-    .movie-card h3 {
-      margin: 0 0 10px;
-      color: red;
-    }
-    .movie-card p {
-      margin: 5px 0;
-      line-height: 1.4;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>MyFlix - Movies</title>
+<style>
+  body { 
+    margin:0; 
+    font-family: Arial, sans-serif; 
+    background: linear-gradient(to bottom, #8B0000, #000); 
+    color: #fff; 
+  }
+  .container { 
+    display:flex; 
+    min-height:100vh; 
+    flex-direction: row;
+  }
+
+  /* Sidebar (справа) */
+  .sidebar {
+    width:220px;
+    background:#111;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  .sidebar h2 { 
+    color:red; 
+    margin:0; 
+    font-size:20px; 
+    text-align:center; 
+  }
+  .sidebar a { 
+    color:white; 
+    text-decoration:none; 
+    padding:10px; 
+    display:block; 
+    border-radius:5px; 
+    text-align:center;
+  }
+  .sidebar a:hover { 
+    background:red; 
+  }
+
+  /* Main content */
+  .main { 
+    flex:1; 
+    padding:20px; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:space-between; 
+  }
+  .cards-container { 
+    display:flex; 
+    flex-direction:column; 
+    gap:20px; 
+  }
+  .card { 
+    display:flex; 
+    gap:20px; 
+    background:#222; 
+    padding:15px; 
+    border-radius:8px; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+  }
+  .card img { 
+    width:150px; 
+    height:220px; 
+    object-fit:cover; 
+    border-radius:8px; 
+  }
+  .card div { 
+    max-width:700px; 
+  }
+  .card h3 { 
+    margin:0 0 10px; 
+    color:red; 
+  }
+  .card p { 
+    margin:5px 0; 
+    line-height:1.4; 
+    font-size:14px; 
+  }
+  .card:hover { 
+    transform:translateY(-5px); 
+    box-shadow:0 4px 10px rgba(0,0,0,0.5); 
+  }
+
+  footer { 
+    text-align:center; 
+    padding:20px; 
+    background:#111; 
+    color:white; 
+    margin-top:20px; 
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1 class="logo">MyFlix</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="series.html">Series</a></li>
-        <li><a href="cartoons.html">Cartoons</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <h2>Popular Movies</h2>
+<div class="container">
 
-  <div class="movies-list">
-    <div class="movie-card">
-      <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame">
-      <div>
-        <h3>Avengers: Endgame (2019)</h3>
-        <p><b>Director:</b> Anthony & Joe Russo</p>
-        <p><b>Genre:</b> Action, Adventure, Sci-Fi</p>
-        <p><b>Plot:</b> After the catastrophic snap of Thanos, the Avengers face their darkest hour. Scattered, broken, and grieving, they must reunite and risk everything to bring back those who were lost. The movie showcases not only massive battles but also the emotional weight of saying goodbye to beloved heroes.</p>
-        <p><b>More:</b> The film balances humor, action, and tragedy, while delivering one of the most satisfying conclusions in cinematic history. It explores themes of destiny, sacrifice, and legacy, leaving fans with unforgettable moments.</p>
-        <p><b>IMDb Rating:</b> ⭐ 8.4/10</p>
+  <!-- Main content -->
+  <div class="main">
+    <div>
+      <h2 style="text-align:center;">Movies</h2>
+      <div class="cards-container">
+
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame">
+          <div>
+            <h3>Avengers: Endgame (2019)</h3>
+            <p><b>Director:</b> Anthony & Joe Russo</p>
+            <p><b>Genre:</b> Action, Adventure, Sci-Fi</p>
+            <p><b>Plot:</b> After the snap of Thanos, the Avengers must reunite to save everyone.</p>
+            <p><b>IMDb Rating:</b> ⭐ 8.4/10</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://miro.medium.com/v2/resize:fit:736/1*lxJt3ijMD20kPvLtv_wkxw.jpeg" alt="Dune">
+          <div>
+            <h3>Dune (2021)</h3>
+            <p><b>Director:</b> Denis Villeneuve</p>
+            <p><b>Genre:</b> Adventure, Drama, Sci-Fi</p>
+            <p><b>Plot:</b> Paul Atreides must survive on the desert planet Arrakis.</p>
+            <p><b>IMDb Rating:</b> ⭐ 8.0/10</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn-images-3.listennotes.com/podcasts/talking-talkies/oppenheimer-savior-or-GtE3CnZV5Nc-yBla_-9tjgn.1400x1400.jpg" alt="Oppenheimer">
+          <div>
+            <h3>Oppenheimer (2023)</h3>
+            <p><b>Director:</b> Christopher Nolan</p>
+            <p><b>Genre:</b> Biography, Drama, History</p>
+            <p><b>Plot:</b> The story of J. Robert Oppenheimer and the atomic bomb.</p>
+            <p><b>IMDb Rating:</b> ⭐ 8.6/10</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://avatars.mds.yandex.net/i?id=1c8f589b8867a0641f2f3ce362a2a952031de2f0-5273802-images-thumbs&n=13" alt="Spider-Man">
+          <div>
+            <h3>Spider-Man: Across the Spider-Verse (2023)</h3>
+            <p><b>Director:</b> Joaquim Dos Santos, Kemp Powers, Justin K. Thompson</p>
+            <p><b>Genre:</b> Animation, Action, Adventure</p>
+            <p><b>Plot:</b> Miles Morales travels across the multiverse to face a new threat.</p>
+            <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://avatars.mds.yandex.net/i?id=8553d56d5fa542343440de431772b735924e05e9-16921443-images-thumbs&n=13" alt="Interstellar">
+          <div>
+            <h3>Interstellar (2014)</h3>
+            <p><b>Director:</b> Christopher Nolan</p>
+            <p><b>Genre:</b> Adventure, Drama, Sci-Fi</p>
+            <p><b>Plot:</b> Astronauts travel through a wormhole to save humanity.</p>
+            <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://avatars.mds.yandex.net/i?id=2123585a90a69b292e3bed6b13f95199f40fa11a-5236263-images-thumbs&n=13" alt="The Dark Knight">
+          <div>
+            <h3>The Dark Knight (2008)</h3>
+            <p><b>Director:</b> Christopher Nolan</p>
+            <p><b>Genre:</b> Action, Crime, Drama</p>
+            <p><b>Plot:</b> Batman faces the Joker, who terrorizes Gotham City.</p>
+            <p><b>IMDb Rating:</b> ⭐ 9.0/10</p>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <div class="movie-card">
-      <img src="https://miro.medium.com/v2/resize:fit:736/1*lxJt3ijMD20kPvLtv_wkxw.jpeg" alt="Dune">
-      <div>
-        <h3>Dune (2021)</h3>
-        <p><b>Director:</b> Denis Villeneuve</p>
-        <p><b>Genre:</b> Adventure, Drama, Sci-Fi</p>
-        <p><b>Plot:</b> Paul Atreides, heir to House Atreides, is thrown into a world of political betrayal and survival on the desert planet Arrakis. Known as the only source of spice, a substance crucial for interstellar travel, Arrakis becomes the battleground for power, faith, and survival.</p>
-        <p><b>More:</b> Dune blends breathtaking visuals with complex themes of destiny, ecology, and human resilience. Paul’s visions of the future reveal his complicated role as both a savior and destroyer. The story explores the struggle between tradition and progress, making it both an epic and philosophical journey.</p>
-        <p><b>IMDb Rating:</b> ⭐ 8.0/10</p>
-      </div>
-    </div>
-
-    <div class="movie-card">
-      <img src="https://cdn-images-3.listennotes.com/podcasts/talking-talkies/oppenheimer-savior-or-GtE3CnZV5Nc-yBla_-9tjgn.1400x1400.jpg" alt="Oppenheimer">
-      <div>
-        <h3>Oppenheimer (2023)</h3>
-        <p><b>Director:</b> Christopher Nolan</p>
-        <p><b>Genre:</b> Biography, Drama, History</p>
-        <p><b>Plot:</b> The film follows J. Robert Oppenheimer, a brilliant physicist whose groundbreaking work on the atomic bomb during World War II forever changed humanity. Caught between scientific ambition and the moral consequences of his creation, Oppenheimer becomes a symbol of both genius and guilt.</p>
-        <p><b>More:</b> Christopher Nolan presents a non-linear narrative, blending black-and-white political hearings with vivid, fiery visions of atomic tests. The movie explores the heavy psychological toll on Oppenheimer, his complicated relationships, and the haunting realization of the destruction his invention unleashed on the world.</p>
-        <p><b>IMDb Rating:</b> ⭐ 8.6/10</p>
-      </div>
-    </div>
-
-    <div class="movie-card">
-      <img src="https://avatars.mds.yandex.net/i?id=1c8f589b8867a0641f2f3ce362a2a952031de2f0-5273802-images-thumbs&n=13" alt="Spider-Man: Across the Spider-Verse (2023)">
-      <div>
-        <h3>Spider-Man: Across the Spider-Verse (2023)</h3>
-        <p><b>Director:</b> Joaquim Dos Santos, Kemp Powers, Justin K. Thompson</p>
-        <p><b>Genre:</b> Animation, Action, Adventure</p>
-        <p><b>Plot:</b> Miles Morales embarks on a new adventure across the multiverse, where he meets a team of Spider-People dedicated to protecting its existence. But when they clash over how to handle a new threat, Miles must redefine what it means to be a hero and save those he loves most.</p>
-        <p><b>More:</b> The film features groundbreaking animation, emotional storytelling, and introduces exciting new characters from different universes. It explores friendship, responsibility, and the courage to follow your own path, even when others doubt you.</p>
-        <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
-      </div>
-    </div>
-
-    <div class="movie-card">
-      <img src="https://avatars.mds.yandex.net/i?id=8553d56d5fa542343440de431772b735924e05e9-16921443-images-thumbs&n=13" alt="Interstellar">
-      <div>
-        <h3>Interstellar (2014)</h3>
-        <p><b>Director:</b> Christopher Nolan</p>
-        <p><b>Genre:</b> Adventure, Drama, Sci-Fi</p>
-        <p><b>Plot:</b> In a future where Earth is failing, astronauts travel through a wormhole to find a new habitable planet. Cooper, a former pilot, leads the mission, while leaving his family behind, to ensure humanity’s survival.</p>
-        <p><b>More:</b> Interstellar explores love, time, and sacrifice, combining scientific theory with emotional storytelling. The visuals of space, black holes, and distant planets are breathtaking.</p>
-        <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
-      </div>
-    </div>
-
-    <div class="movie-card">
-      <img src="https://avatars.mds.yandex.net/i?id=2123585a90a69b292e3bed6b13f95199f40fa11a-5236263-images-thumbs&n=13" alt="The Dark Knight">
-      <div>
-        <h3>The Dark Knight (2008)</h3>
-        <p><b>Director:</b> Christopher Nolan</p>
-        <p><b>Genre:</b> Action, Crime, Drama</p>
-        <p><b>Plot:</b> Batman faces the chaotic Joker, who terrorizes Gotham City. The film explores morality, justice, and the psychological struggle between hero and villain, pushing Batman to his limits.</p>
-        <p><b>More:</b> The Dark Knight is praised for its intense action, memorable performances, and its exploration of ethical dilemmas in heroism.</p>
-        <p><b>IMDb Rating:</b> ⭐ 9.0/10</p>
-      </div>
-    </div>
+    <footer>
+      Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
+    </footer>
   </div>
 
-  <footer>
-    <p>&copy; Groupe members: Alua Sagyndyk, Bolatova Altynay, Dovletbayeva Farida(2025 MyFlix)</p>
-  </footer>
+  <!-- Sidebar справа -->
+  <div class="sidebar">
+    <h2>MyFlix</h2>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="series.html">Series</a>
+    <a href="cartoons.html">Cartoons</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+</div>
+
 </body>
-</html>
+</html> 

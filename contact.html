@@ -3,107 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact - MyFlix</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-    .contact-container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #222;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    body { 
+      margin:0; 
+      font-family: Arial, sans-serif; 
+      background: linear-gradient(to bottom, #8B0000, #000); 
+      color:#fff; 
+      display:flex;
+      min-height:100vh;
     }
-    .contact-container h2 {
-      text-align: center;
-      color: red;
-      margin-bottom: 10px;
+    .container { display:flex; flex:1; }
+
+    /* Main content */
+    .main { 
+      flex:1; 
+      display:flex; 
+      flex-direction:column; 
     }
-    .contact-container p.intro {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 15px;
-      color: #ccc;
+    .content {
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+    .content h2 { color:red; margin-bottom:10px; }
+    .intro { margin-bottom:20px; color:#ccc; font-size:15px; max-width:500px; }
+
+    .contact-container { 
+      width:100%; 
+      max-width:500px; 
+      display:flex; 
+      flex-direction:column; 
+      gap:15px; 
     }
     .contact-box {
-      background: #333;
-      border-radius: 10px;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      transition: 0.3s;
-      cursor: pointer;
+      background:#222;
+      border-radius:8px;
+      padding:15px 20px;
+      transition:0.3s;
+      cursor:pointer;
+      text-align:center;
     }
-    .contact-box:hover {
-      background: #444;
+    .contact-box:hover { background:#333; }
+    .contact-box h3 { margin:0; color:red; font-size:18px; }
+    .contact-box p { margin:5px 0 0; color:#bbb; font-size:14px; }
+
+    footer { text-align:center; padding:20px; background:#111; color:#aaa; font-size:14px; }
+
+    /* Sidebar (right side) */
+    .sidebar {
+      width:220px;
+      background:#111;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
     }
-    .contact-box h3 {
-      margin: 0;
-      font-size: 18px;
-      color: #fff;
-    }
-    .contact-box p {
-      margin: 5px 0 0;
-      font-size: 14px;
-      color: #bbb;
-    }
-    .contact-box a {
-      color: #ff5555;
-      text-decoration: none;
-    }
-    .contact-box a:hover {
-      text-decoration: underline;
-    }
+    .sidebar h2 { color:red; margin:0; font-size:20px; text-align:center; }
+    .sidebar a { color:white; text-decoration:none; padding:10px; display:block; border-radius:5px; }
+    .sidebar a:hover { background:red; }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1 class="logo">MyFlix</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="series.html">Series</a></li>
-        <li><a href="cartoons.html">Cartoons</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<div class="container">
+  <!-- Main content -->
+  <div class="main">
+    <div class="content">
+      <h2>Contact Us</h2>
+      <p class="intro">If you have any questions or collaboration offers, feel free to reach us using the options below:</p>
 
-  <section>
-    <div class="contact-container">
-    <h2>Get in Touch</h2>
-    <p class="intro">
-        If you have any questions or partnership inquiries, please contact us:
-    </p>
-
-    <form action="#" method="POST" class="contact-form">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+      <div class="contact-container">
+        <div class="contact-box">
+          <h3>🏢 Office</h3>
+          <p>Astana, AITU University</p>
         </div>
-        <br>
 
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <div class="contact-box">
+          <h3>📞 Phone</h3>
+          <p>+7 705 391 58 95</p>
         </div>
-        <br>
 
-        <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+        <div class="contact-box">
+          <h3>✉️ Email</h3>
+          <p>support@myflix.com</p>
         </div>
-        <br>
+      </div>
+    </div>
 
-        <button type="submit" class="submit-button">Send Message</button>
-    </form>
+    <footer>
+      &copy; Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
+    </footer>
+  </div>
+
+  <!-- Sidebar (right side) -->
+  <div class="sidebar">
+    <h2>MyFlix</h2>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="series.html">Series</a>
+    <a href="cartoons.html">Cartoons</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </div>
-  </section>
-
- <footer>
-    <p>&copy; Groupe members: Alua Sagyndyk, Bolatova Altynay, Dovletbayeva Farida(2025 MyFlix)</p>
-  </footer>
 
 </body>
 </html>
