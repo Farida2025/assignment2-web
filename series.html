@@ -1,96 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>MyFlix - Series</title>
-<style>
-  body { margin:0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #8B0000, #000); color: #fff; }
-  .container { display:flex; flex-direction:row; min-height:100vh; } /* Sidebar справа */
-
-  /* Sidebar */
-  .sidebar {
-    width:220px;
-    background:#111;
-    padding:20px;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-  }
-  .sidebar h2 { color:red; margin:0; font-size:20px; text-align:center; }
-  .sidebar a { color:white; text-decoration:none; padding:10px; display:block; border-radius:5px; }
-  .sidebar a:hover { background:red; }
-
-  /* Main content */
-  .main { flex:1; padding:20px; }
-
-  .series-list { display:flex; flex-direction:column; gap:30px; }
-  .series-card { display:flex; gap:20px; background:#222; padding:15px; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s; }
-  .series-card img { width:200px; height:300px; object-fit:cover; border-radius:8px; }
-  .series-info { flex:1; }
-  .series-info h3 { margin:0 0 10px; color:red; }
-  .series-info p { margin:5px 0; font-size:14px; line-height:1.4; }
-  .series-card:hover { transform:translateY(-5px); box-shadow:0 4px 10px rgba(0,0,0,0.5); }
-
-  footer { text-align:center; padding:20px; background:#111; color:white; margin-top:20px; }
-</style>
+    <meta charset="UTF-8">
+    <title>MyFlix - Series</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header>
+    <div class="photo">
+        <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
+    </div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html" class="active">Series</a>
+        <a href="cartoons.html">Cartoons</a>
+    </div>
+</header>
+
 <div class="container">
-  <!-- Main content -->
-  <div class="main">
-    <h2>Popular Series</h2>
+    <div class="main">
+        <h2>Series</h2>
 
-    <div class="series-list">
-      <div class="series-card">
-        <img src="https://upload.wikimedia.org/wikipedia/ru/f/f7/Stranger_Things_season_2.jpg" alt="Stranger Things">
-        <div class="series-info">
-          <h3>Stranger Things</h3>
-          <p><b>Years:</b> 2016 – present</p>
-          <p><b>Actors:</b> Millie Bobby Brown, Finn Wolfhard, David Harbour</p>
-          <p><b>Plot:</b> Kids in Hawkins face supernatural threats from the Upside Down.</p>
-          <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
-        </div>
-      </div>
+        <div class="series-list">
+            <div class="series-card">
+                <img src="https://upload.wikimedia.org/wikipedia/ru/f/f7/Stranger_Things_season_2.jpg" alt="Stranger Things">
+                <div class="series-info">
+                    <h3>Stranger Things</h3>
+                    <p><b>Years:</b> 2016 – present</p>
+                    <p><b>Actors:</b> Millie Bobby Brown, Finn Wolfhard, David Harbour</p>
+                    <p><b>Plot:</b> Kids in Hawkins face supernatural threats from the Upside Down.</p>
+                    <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
+                </div>
+            </div>
 
-      <div class="series-card">
-        <img src="https://avatars.mds.yandex.net/i?id=a1fe7340327511ab49421742736d8d91_l-5294324-images-thumbs&n=13" alt="Game of Thrones">
-        <div class="series-info">
-          <h3>Game of Thrones</h3>
-          <p><b>Years:</b> 2011 – 2019</p>
-          <p><b>Actors:</b> Emilia Clarke, Kit Harington, Peter Dinklage</p>
-          <p><b>Plot:</b> Noble families fight for the Iron Throne while facing betrayal, war, and an ancient enemy.</p>
-          <p><b>IMDb Rating:</b> ⭐ 9.2/10</p>
-        </div>
-      </div>
+            <div class="series-card">
+                <img src="https://avatars.mds.yandex.net/i?id=a1fe7340327511ab49421742736d8d91_l-5294324-images-thumbs&n=13" alt="Game of Thrones">
+                <div class="series-info">
+                    <h3>Game of Thrones</h3>
+                    <p><b>Years:</b> 2011 – 2019</p>
+                    <p><b>Actors:</b> Emilia Clarke, Kit Harington, Peter Dinklage</p>
+                    <p><b>Plot:</b> Noble families fight for the Iron Throne while facing betrayal, war, and an ancient enemy.</p>
+                    <p><b>IMDb Rating:</b> ⭐ 9.2/10</p>
+                </div>
+            </div>
 
-      <div class="series-card">
-        <img src="https://avatars.mds.yandex.net/i?id=8f173048a66a26082906a2ebb70c0bfc_l-10384973-images-thumbs&n=13" alt="Wednesday">
-        <div class="series-info">
-          <h3>Wednesday</h3>
-          <p><b>Years:</b> 2022 – present</p>
-          <p><b>Actors:</b> Jenna Ortega, Catherine Zeta-Jones, Luis Guzmán</p>
-          <p><b>Plot:</b> Wednesday investigates murders at Nevermore Academy and discovers her psychic abilities.</p>
-          <p><b>IMDb Rating:</b> ⭐ 8.0/10</p>
+            <div class="series-card">
+                <img src="https://avatars.mds.yandex.net/i?id=8f173048a66a26082906a2ebb70c0bfc_l-10384973-images-thumbs&n=13" alt="Wednesday">
+                <div class="series-info">
+                    <h3>Wednesday</h3>
+                    <p><b>Years:</b> 2022 – present</p>
+                    <p><b>Actors:</b> Jenna Ortega, Catherine Zeta-Jones, Luis Guzmán</p>
+                    <p><b>Plot:</b> Wednesday investigates murders at Nevermore Academy and discovers her psychic abilities.</p>
+                    <p><b>IMDb Rating:</b> ⭐ 8.0/10</p>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <footer>
+            &copy; Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
+        </footer>
     </div>
 
-    <footer>
-      &copy; Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
-    </footer>
-  </div>
-
-  <!-- Sidebar справа -->
-  <div class="sidebar">
-    <h2>MyFlix</h2>
-    <a href="index.html">Home</a>
-    <a href="movies.html">Movies</a>
-    <a href="series.html">Series</a>
-    <a href="cartoons.html">Cartoons</a>
-    <a href="news.html">News</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <div class="sidebar">
+        <h2>MyFlix</h2>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+    </div>
 </div>
 
 </body>

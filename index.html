@@ -1,200 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MyFlix - Home</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #8B0000, #000);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .content {
-      display: flex;
-      flex: 1;
-    }
-
-    .main {
-      flex: 1;
-      padding: 20px;
-    }
-    .cards-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .card {
-      flex: 1;
-      min-width: 200px;
-      background: #222;
-      padding: 15px;
-      border-radius: 8px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .card h3 {
-      margin: 10px 0;
-      color: red;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
-
-
-    .sidebar {
-      width: 220px;
-      background: #111;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .sidebar h2 {
-      color: red;
-      margin: 0;
-      font-size: 20px;
-      text-align: center;
-    }
-    .sidebar a {
-      color: white;
-      text-decoration: none;
-      padding: 10px;
-      display: block;
-      border-radius: 5px;
-    }
-    .sidebar a:hover {
-      background: red;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #111;
-      color: white;
-    }
-
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background-color: #000;
-    }
-
-    header h1 {
-      color: red;
-      margin: 0;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      color: red;
-    }
-
-    .logo {
-      width: 100px; 
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>MyFlix - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-
-  <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
-
-
-  
+    <div class="photo">
+        <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
+    </div>
+    <div class="menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="cartoons.html">Cartoons</a>
+    </div>
 </header>
 
-<div class="content">
+<div class="container">
 
-  <div class="main">
-    <h2>Popular Movies</h2>
-    <div class="cards-container">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame">
-        <h3>Avengers: Endgame</h3>
-      </div>
-      <div class="card">
-        <img src="https://miro.medium.com/v2/resize:fit:736/1*lxJt3ijMD20kPvLtv_wkxw.jpeg" alt="Dune">
-        <h3>Dune</h3>
-      </div>
-      <div class="card">
-        <img src="https://cdn-images-3.listennotes.com/podcasts/talking-talkies/oppenheimer-savior-or-GtE3CnZV5Nc-yBla_-9tjgn.1400x1400.jpg" alt="Oppenheimer">
-        <h3>Oppenheimer</h3>
-      </div>
+    <div class="main home-section">
+        <div>
+            <h2>Popular Movies</h2>
+            <div class="cards-container">
+                <div class="home-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame">
+                    <h3>Avengers: Endgame</h3>
+                </div>
+                <div class="home-card">
+                    <img src="https://miro.medium.com/v2/resize:fit:736/1*lxJt3ijMD20kPvLtv_wkxw.jpeg" alt="Dune">
+                    <h3>Dune</h3>
+                </div>
+                <div class="home-card">
+                    <img src="https://cdn-images-3.listennotes.com/podcasts/talking-talkies/oppenheimer-savior-or-GtE3CnZV5Nc-yBla_-9tjgn.1400x1400.jpg" alt="Oppenheimer">
+                    <h3>Oppenheimer</h3>
+                </div>
+            </div>
+
+            <h2>Popular Series</h2>
+            <div class="cards-container">
+                <div class="home-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/ru/f/f7/Stranger_Things_season_2.jpg" alt="Stranger Things">
+                    <h3>Stranger Things</h3>
+                </div>
+                <div class="home-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=a1fe7340327511ab49421742736d8d91_l-5294324-images-thumbs&n=13" alt="Game of Thrones">
+                    <h3>Game of Thrones</h3>
+                </div>
+                <div class="home-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=8f173048a66a26082906a2ebb70c0bfc_l-10384973-images-thumbs&n=13" alt="Wednesday">
+                    <h3>Wednesday</h3>
+                </div>
+            </div>
+
+            <h2>Popular Cartoons</h2>
+            <div class="cards-container">
+                <div class="home-card">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/p_toystory_19639_424d94a0.jpeg?region=0%2C0%2C540%2C810" alt="Toy Story">
+                    <h3>Toy Story</h3>
+                </div>
+                <div class="home-card">
+                    <img src="https://play-lh.googleusercontent.com/YovlpWlhzPFOsVZ5ZJT8WUynnhjyMMi05IaaV1a5st3s8nJZ2xD67zjysih3BWIEHBBTfvlNpweDKXSfdeI=w480-h960" alt="Soul">
+                    <h3>Soul</h3>
+                </div>
+                <div class="home-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=88abb8b89b7b6b9d45a22fea1eecb3eb_l-8341432-images-thumbs&n=13" alt="Ralph breaks the internet">
+                    <h3>Ralph breaks the internet</h3>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
+        </footer>
     </div>
 
-    <h2>Popular Series</h2>
-    <div class="cards-container">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/ru/f/f7/Stranger_Things_season_2.jpg" alt="Stranger Things">
-        <h3>Stranger Things</h3>
-      </div>
-      <div class="card">
-        <img src="https://avatars.mds.yandex.net/i?id=a1fe7340327511ab49421742736d8d91_l-5294324-images-thumbs&n=13" alt="Game of Thrones">
-        <h3>Game of Thrones</h3>
-      </div>
-      <div class="card">
-        <img src="https://avatars.mds.yandex.net/i?id=8f173048a66a26082906a2ebb70c0bfc_l-10384973-images-thumbs&n=13" alt="Wednesday">
-        <h3>Wednesday</h3>
-      </div>
+    <div class="sidebar">
+        <h2>MyFlix</h2>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
     </div>
-
-    <h2>Popular Cartoons</h2>
-    <div class="cards-container">
-      <div class="card">
-        <img src="https://lumiere-a.akamaihd.net/v1/images/p_toystory_19639_424d94a0.jpeg?region=0%2C0%2C540%2C810" alt="Toy Story">
-        <h3>Toy Story</h3>
-      </div>
-      <div class="card">
-        <img src="https://play-lh.googleusercontent.com/YovlpWlhzPFOsVZ5ZJT8WUynnhjyMMi05IaaV1a5st3s8nJZ2xD67zjysih3BWIEHBBTfvlNpweDKXSfdeI=w480-h960" alt="Soul">
-        <h3>Soul</h3>
-      </div>
-      <div class="card">
-        <img src="https://avatars.mds.yandex.net/i?id=88abb8b89b7b6b9d45a22fea1eecb3eb_l-8341432-images-thumbs&n=13" alt="Ralph breaks the internet">
-        <h3>Ralph breaks the internet</h3>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="sidebar">
-    <h2>MyFlix</h2>
-    <a href="index.html">Home</a>
-    <a href="movies.html">Movies</a>
-    <a href="series.html">Series</a>
-    <a href="cartoons.html">Cartoons</a>
-    <a href="news.html">News</a>
-    <a href="contact.html">Contact</a>
-  </div>
 </div>
-
-<footer>
-  Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
-</footer>
 
 </body>
 </html>

@@ -1,115 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cartoons - MyFlix</title>
-  <style>
-    body { 
-      margin:0; 
-      font-family: Arial, sans-serif; 
-      background: linear-gradient(to bottom, #8B0000, #000); 
-      color:#fff; 
-      display:flex;
-      min-height:100vh;
-    }
-    .container { display:flex; flex:1; }
-
-    /* Main content */
-    .main { flex:1; padding:20px; }
-    .cards-container { display:flex; flex-direction:column; gap:20px; }
-    .card { display:flex; gap:20px; background:#222; padding:15px; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s; }
-    .card img { width:150px; height:220px; object-fit:cover; border-radius:8px; }
-    .card div { max-width:700px; }
-    .card h3 { margin:0 0 10px; color:red; }
-    .card p { margin:6px 0; line-height:1.4; font-size:14px; }
-    .card:hover { transform:translateY(-5px); box-shadow:0 4px 10px rgba(0,0,0,0.5); }
-
-    footer { text-align:center; padding:20px; background:#111; margin-top:20px; }
-
-    /* Sidebar (right side) */
-    .sidebar {
-      width:220px;
-      background:#111;
-      padding:20px;
-      display:flex;
-      flex-direction:column;
-      gap:20px;
-    }
-    .sidebar h2 { color:red; margin:0; font-size:20px; text-align:center; }
-    .sidebar a { color:white; text-decoration:none; padding:10px; border-radius:5px; }
-    .sidebar a:hover { background:red; }
-  </style>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Cartoons - MyFlix</title>
 </head>
 <body>
 
+<header>
+    <div class="photo">
+        <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
+    </div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="cartoons.html" class="active">Cartoons</a>
+    </div>
+</header>
+
 <div class="container">
-  <!-- Main content -->
-  <div class="main">
-    <h2>Popular Cartoons</h2>
-    <div class="cards-container">
+    <div class="main">
+        <h2>Cartoons</h2>
+        <div class="cards-container">
 
-      <div class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8osYPFkoJ43Ej9K_h3vobKzc-y40s0UqU1w&s" alt="SpongeBob">
-        <div>
-          <h3>SpongeBob SquarePants</h3>
-          <p><b>Years:</b> 1999 – present</p>
-          <p>Adventures of SpongeBob and his friends in Bikini Bottom.</p>
+            <div class="media-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8osYPFkoJ43Ej9K_h3vobKzc-y40s0UqU1w&s" alt="SpongeBob">
+                <div>
+                    <h3>SpongeBob SquarePants</h3>
+                    <p><b>Years:</b> 1999 – present</p>
+                    <p>Adventures of SpongeBob and his friends in Bikini Bottom.</p>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14279_p_v10_aa.jpg" alt="Tom and Jerry">
+                <div>
+                    <h3>Tom and Jerry</h3>
+                    <p><b>Years:</b> 1940 – present</p>
+                    <p>Classic rivalry between a mischievous mouse and a clumsy cat.</p>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9248224_b_v8_ax.jpg" alt="Gravity Falls">
+                <div>
+                    <h3>Gravity Falls</h3>
+                    <p><b>Years:</b> 2012 – 2016</p>
+                    <p>Dipper and Mabel uncover supernatural mysteries in Gravity Falls.</p>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <img src="https://m.media-amazon.com/images/I/61Wps+FMG-L._UF1000,1000_QL80_.jpg" alt="Avatar">
+                <div>
+                    <h3>Avatar: The Last Airbender</h3>
+                    <p><b>Years:</b> 2005 – 2008</p>
+                    <p>Aang must master the four elements to bring peace to the world.</p>
+                </div>
+            </div>
+
+            <div class="media-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg" alt="Rick and Morty">
+                <div>
+                    <h3>Rick and Morty</h3>
+                    <p><b>Years:</b> 2013 – present</p>
+                    <p>A mad scientist and his grandson go on chaotic adventures across dimensions.</p>
+                </div>
+            </div>
+
         </div>
-      </div>
 
-      <div class="card">
-        <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14279_p_v10_aa.jpg" alt="Tom and Jerry">
-        <div>
-          <h3>Tom and Jerry</h3>
-          <p><b>Years:</b> 1940 – present</p>
-          <p>Classic rivalry between a mischievous mouse and a clumsy cat.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9248224_b_v8_ax.jpg" alt="Gravity Falls">
-        <div>
-          <h3>Gravity Falls</h3>
-          <p><b>Years:</b> 2012 – 2016</p>
-          <p>Dipper and Mabel uncover supernatural mysteries in Gravity Falls.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/I/61Wps+FMG-L._UF1000,1000_QL80_.jpg" alt="Avatar">
-        <div>
-          <h3>Avatar: The Last Airbender</h3>
-          <p><b>Years:</b> 2005 – 2008</p>
-          <p>Aang must master the four elements to bring peace to the world.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg" alt="Rick and Morty">
-        <div>
-          <h3>Rick and Morty</h3>
-          <p><b>Years:</b> 2013 – present</p>
-          <p>A mad scientist and his grandson go on chaotic adventures across dimensions.</p>
-        </div>
-      </div>
-
+        <footer>
+            Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
+        </footer>
     </div>
 
-    <footer>
-      Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
-    </footer>
-  </div>
-
-  <!-- Sidebar (right side) -->
-  <div class="sidebar">
-    <h2>MyFlix</h2>
-    <a href="index.html">Home</a>
-    <a href="movies.html">Movies</a>
-    <a href="series.html">Series</a>
-    <a href="cartoons.html">Cartoons</a>
-    <a href="news.html">News</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <div class="sidebar">
+        <h2>MyFlix</h2>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+    </div>
 </div>
 
 </body>
