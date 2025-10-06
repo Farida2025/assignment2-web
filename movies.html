@@ -2,110 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MyFlix - Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <title>Movies - MyFlix</title>
 </head>
 <body>
-<header>
-    <div class="photo">
-        <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 px-4">
+    
+    <div class="container-fluid">
+        
+        <a class="navbar-brand" href="index.html">
+            <div class="photo">
+                <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
+            </div>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            
+            <ul class="navbar-nav gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="movies.html">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="series.html">Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cartoons.html">Cartoons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
     </div>
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="movies.html" class="active">Movies</a>
-        <a href="series.html">Series</a>
-        <a href="cartoons.html">Cartoons</a>
-    </div>
-</header>
+</nav>
 
-<div class="container">
+<div class="container-fluid">
+    
+    <div class="row">
+        
+        <main class="main col-12 p-4 mt-3 mt-lg-0">
+            
+            <h2 class="mb-4">All Movies</h2>
+            
+            <div class="cards-container d-grid gap-4 mb-5">
 
-    <div class="main">
-        <div>
-            <h2>Movies</h2>
-            <div class="cards-container">
-
-                <div class="media-card">
+                <div class="media-card p-3 gap-3">
                     <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame">
                     <div>
-                        <h3>Avengers: Endgame (2019)</h3>
-                        <p><b>Director:</b> Anthony & Joe Russo</p>
-                        <p><b>Genre:</b> Action, Adventure, Sci-Fi</p>
-                        <p><b>Plot:</b> After the snap of Thanos, the Avengers must reunite to save everyone.</p>
-                        <p><b>IMDb Rating:</b> ⭐ 8.4/10</p>
+                        <h3 class="mt-0 mb-2">Avengers: Endgame (2019)</h3>
+                        <p class="my-1"><b>Genre:</b> Action, Sci-Fi, Adventure</p>
+                        <p class="my-1"><b>Runtime:</b> 3h 1m</p>
+                        <p class="my-1"><b>Director:</b> Anthony Russo, Joe Russo</p>
+                        <p class="my-1"><b>IMDb Rating:</b> ⭐ 8.4/10</p>
+                        
+                        <div class="btn-group mt-3" role="group" aria-label="Movie actions">
+                            <a href="#" class="btn btn-sm btn-outline-danger">Details</a>
+                            <a href="#" class="btn btn-sm btn-danger">Watch Trailer</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="media-card">
+                <div class="media-card p-3 gap-3">
                     <img src="https://miro.medium.com/v2/resize:fit:736/1*lxJt3ijMD20kPvLtv_wkxw.jpeg" alt="Dune">
                     <div>
-                        <h3>Dune (2021)</h3>
-                        <p><b>Director:</b> Denis Villeneuve</p>
-                        <p><b>Genre:</b> Adventure, Drama, Sci-Fi</p>
-                        <p><b>Plot:</b> Paul Atreides must survive on the desert planet Arrakis.</p>
-                        <p><b>IMDb Rating:</b> ⭐ 8.0/10</p>
+                        <h3 class="mt-0 mb-2">Dune (2021)</h3>
+                        <p class="my-1"><b>Genre:</b> Sci-Fi, Adventure, Drama</p>
+                        <p class="my-1"><b>Runtime:</b> 2h 35m</p>
+                        <p class="my-1"><b>Director:</b> Denis Villeneuve</p>
+                        <p class="my-1"><b>IMDb Rating:</b> ⭐ 8.0/10</p>
                     </div>
                 </div>
 
-                <div class="media-card">
+                <div class="media-card p-3 gap-3">
                     <img src="https://cdn-images-3.listennotes.com/podcasts/talking-talkies/oppenheimer-savior-or-GtE3CnZV5Nc-yBla_-9tjgn.1400x1400.jpg" alt="Oppenheimer">
                     <div>
-                        <h3>Oppenheimer (2023)</h3>
-                        <p><b>Director:</b> Christopher Nolan</p>
-                        <p><b>Genre:</b> Biography, Drama, History</p>
-                        <p><b>Plot:</b> The story of J. Robert Oppenheimer and the atomic bomb.</p>
-                        <p><b>IMDb Rating:</b> ⭐ 8.6/10</p>
-                    </div>
-                </div>
-
-                <div class="media-card">
-                    <img src="https://avatars.mds.yandex.net/i?id=1c8f589b8867a0641f2f3ce362a2a952031de2f0-5273802-images-thumbs&n=13" alt="Spider-Man">
-                    <div>
-                        <h3>Spider-Man: Across the Spider-Verse (2023)</h3>
-                        <p><b>Director:</b> Joaquim Dos Santos, Kemp Powers, Justin K. Thompson</p>
-                        <p><b>Genre:</b> Animation, Action, Adventure</p>
-                        <p><b>Plot:</b> Miles Morales travels across the multiverse to face a new threat.</p>
-                        <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
-                    </div>
-                </div>
-
-                <div class="media-card">
-                    <img src="https://avatars.mds.yandex.net/i?id=8553d56d5fa542343440de431772b735924e05e9-16921443-images-thumbs&n=13" alt="Interstellar">
-                    <div>
-                        <h3>Interstellar (2014)</h3>
-                        <p><b>Director:</b> Christopher Nolan</p>
-                        <p><b>Genre:</b> Adventure, Drama, Sci-Fi</p>
-                        <p><b>Plot:</b> Astronauts travel through a wormhole to save humanity.</p>
-                        <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
-                    </div>
-                </div>
-
-                <div class="media-card">
-                    <img src="https://avatars.mds.yandex.net/i?id=2123585a90a69b292e3bed6b13f95199f40fa11a-5236263-images-thumbs&n=13" alt="The Dark Knight">
-                    <div>
-                        <h3>The Dark Knight (2008)</h3>
-                        <p><b>Director:</b> Christopher Nolan</p>
-                        <p><b>Genre:</b> Action, Crime, Drama</p>
-                        <p><b>Plot:</b> Batman faces the Joker, who terrorizes Gotham City.</p>
-                        <p><b>IMDb Rating:</b> ⭐ 9.0/10</p>
+                        <h3 class="mt-0 mb-2">Oppenheimer (2023)</h3>
+                        <p class="my-1"><b>Genre:</b> Biography, Drama, History</p>
+                        <p class="my-1"><b>Runtime:</b> 3h 0m</p>
+                        <p class="my-1"><b>Director:</b> Christopher Nolan</p>
+                        <p class="my-1"><b>IMDb Rating:</b> ⭐ 8.5/10</p>
                     </div>
                 </div>
 
             </div>
-        </div>
-
-        <footer>
-            Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
-        </footer>
-    </div>
-
-    <div class="sidebar">
-        <h2>MyFlix</h2>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-    </div>
-
-</div>
-
+            
+            <footer class="mt-5 py-3">
+                Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
+            </footer>
+        </main>
+        
+    </div> 
+</div> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -2,77 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>News - MyFlix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <title>News - MyFlix</title>
 </head>
 <body>
 
-<header>
-    <div class="photo">
-        <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
-    </div>
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="movies.html">Movies</a>
-        <a href="series.html">Series</a>
-        <a href="cartoons.html">Cartoons</a>
-    </div>
-</header>
-
-<div class="container">
-    <div class="main">
-        <h2>Latest Movie & Actor News</h2>
-        <div class="news-list">
-
-            <div class="media-card">
-                <img src="https://ew.com/thmb/axebZBmTYHQj1N2Ps2-i25CxwPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/spider-man-no-way-home-091924-ac9d2d7aa2ba4ca08fbc98962ca6bb1d.jpg" alt="Spider man">
-                <div>
-                    <h3>Tom Holland Hospitalised After Spider-Man Fall</h3>
-                    <p>Tom Holland suffered a minor concussion on the set of <em>Spider-Man: Brand New Day</em>. Shooting is expected to continue soon.
-                        <a href="https://ew.com/tom-holland-hospitalized-after-fall-on-spider-man-set-11814268" target="_blank">Read more</a></p>
-                </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 px-4">
+    
+    <div class="container-fluid">
+        
+        <a class="navbar-brand" href="index.html">
+            <div class="photo">
+                <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
             </div>
-
-            <div class="media-card">
-                <img src="https://ew.com/thmb/zqYaYseOZYRbsi_meQsOUEwAEGk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Martin-Scorsese--Leonardo-DiCaprio-Jennifer-Lawrence-091825-b8752f355192454e91d200ff84edf135.jpg" alt="Martin Scorsese, Leonardo DiCaprio, and Jennifer Lawrence.">
-                <div>
-                    <h3>Martin Scorsese’s Next Film Announced</h3>
-                    <p>Martin Scorsese is teaming up with Leonardo DiCaprio and Jennifer Lawrence for <em>What Happens at Night</em>, based on the novel.
-                        <a href="https://ew.com/martin-scorsese-sets-next-film-leonardo-dicaprio-jennifer-lawrence-what-happens-at-night-11813305" target="_blank">Read more</a></p>
-                </div>
-            </div>
-
-            <div class="media-card">
-                <img src="https://static.toiimg.com/thumb/msid-123913087,imgsize-22212,width-400,resizemode-4/mary-mcdonnell.jpg" alt="Mary McDonnell">
-                <div>
-                    <h3>Mary McDonnell Joins Marvel</h3>
-                    <p>Mary McDonnell is set to star in Marvel’s upcoming thriller <em>One Second After</em>.
-                        <a href="https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/mary-mcdonnell-joins-marvel-cinematic-universe-to-star-in-thriller-one-second-after-deets-inside/articleshow/123913112.cms" target="_blank">Read more</a></p>
-                </div>
-            </div>
-
-            <div class="media-card">
-                <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/02/tron-ares-ares-jared-leto.jpg" alt="Tron: Ares">
-                <div>
-                    <h3>Tron: Ares Coming in 2025</h3>
-                    <p>The highly anticipated <em>Tron: Ares</em> will premiere on October 10, 2025, starring Jared Leto, Greta Lee, and Evan Peters.
-                        <a href="https://en.wikipedia.org/wiki/Tron%3A_Ares" target="_blank">Read more</a></p>
-                </div>
-            </div>
-
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            
+            <ul class="navbar-nav gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="movies.html">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="series.html">Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cartoons.html">Cartoons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="news.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
         </div>
-
-        <footer>
-            Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
-        </footer>
+        
     </div>
+</nav>
+<div class="container-fluid">
+    
+    <div class="row">
+        
+        <main class="main col-12 p-4 mt-3 mt-lg-0">
+            
+            <h2 class="mb-4">Latest Entertainment News</h2>
+            
+            <div class="news-list d-grid gap-4 mb-5">
 
-    <div class="sidebar">
-        <h2>MyFlix</h2>
-        <a href="news.html" class="active">News</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</div>
+                <div class="media-card p-3 gap-3">
+                    <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2025/03/03158249_poster_w780.jpg" alt="Loki Season 3">
+                    <div>
+                        <h3 class="mt-0 mb-2">Loki Season 3: Renewal Status and Release Predictions</h3>
+                        <p class="my-1">Marvel is reportedly finalizing plans for the third season of the fan-favorite series 'Loki', with production likely to start next year.</p>
+                        <p class="my-1 text-muted">Published: October 5, 2025</p>
+                        <a href="#" class="mt-2 d-inline-block">Read More</a>
+                    </div>
+                </div>
 
+                <div class="media-card p-3 gap-3">
+                    <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2023/07/barbenheimer-barbie-oppenheimer-movies-box-office-records-achievements.jpg?w=1600&h=900&fit=crop" alt="Box Office Records">
+                    <div>
+                        <h3 class="mt-0 mb-2">The 'Barbenheimer' Phenomenon Continues to Break Box Office Records</h3>
+                        <p class="my-1">The double feature release of 'Barbie' and 'Oppenheimer' has had an unprecedented impact, boosting cinema attendance globally.</p>
+                        <p class="my-1 text-muted">Published: September 28, 2025</p>
+                        <a href="#" class="mt-2 d-inline-block">Read More</a>
+                    </div>
+                </div>
+
+                <div class="media-card p-3 gap-3">
+                    <img src="https://deadline.com/wp-content/uploads/2024/02/Dune-Part-2.jpg" alt="Dune Part Two">
+                    <div>
+                        <h3 class="mt-0 mb-2">Dune: Part Two Receives Rave Reviews Ahead of Global Premiere</h3>
+                        <p class="my-1">Critics are calling Denis Villeneuve's sequel a masterpiece, praising its stunning visuals and compelling narrative.</p>
+                        <p class="my-1 text-muted">Published: September 20, 2025</p>
+                        <a href="#" class="mt-2 d-inline-block">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="mt-5 py-3">
+                Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
+            </footer>
+        </main>
+        
+    </div> 
+</div> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
