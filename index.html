@@ -18,13 +18,11 @@
         <a href="cartoons.html">Cartoons</a>
         <a href="news.html">News</a>
         <a href="contact.html" >Contact</a>
-        <a href="login.html">Sign up</a>
-        
+        <button id="openAccessModal" class="nav-button">Sign Up</button>   
     </div>
 </header>
 
 <div class="container">
-
     <div class="main home-section">
         <div class= "content-wrapper">
             <h2>Popular Movies</h2>
@@ -105,10 +103,70 @@
         <footer>
             Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
         </footer>
-    </div>
+        <div id="accessModal" class="modal">
+        <div class="modal-content">
+        <span class="close-button">&times;</span>
 
+        <div class="form-wrapper" id="registerPanel">
+            <h3>Sign Up</h3>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="regEmail">Email:</label>
+                    <input type="email" id="regEmail" name="email">
+                    <div class="error-message" id="regEmailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="regPassword">Password (Min 8 chars):</label>
+                    <input type="password" id="regPassword" name="password">
+                    <div class="error-message" id="regPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirm Password:</label>
+                    <input type="password" id="regConfirmPassword" name="confirmPassword">
+                    <div class="error-message" id="regConfirmPasswordError"></div>
+                </div>
+
+                <button type="submit" id="regSubmitBtn">Register</button>
+                <div class="success-message" id="regSuccessMessage"></div>
+            </form>
+
+            <p class="switch-link">
+                Already have an account? 
+                <a href="#" id="showLogin">Log In</a>
+            </p>
+        </div>
+        
+        <div class="form-wrapper" id="loginPanel" style="display: none;">
+            <h3>Log In</h3>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="logEmail">Email:</label>
+                    <input type="email" id="logEmail" name="email">
+                    <div class="error-message" id="logEmailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="logPassword">Password:</label>
+                    <input type="password" id="logPassword" name="password">
+                    <div class="error-message" id="logPasswordError"></div>
+                </div>
+
+                <button type="submit" id="logSubmitBtn">Log In</button>
+                <div class="success-message" id="logSuccessMessage"></div>
+            </form>
+
+            <p class="switch-link">
+                Don't have an account? 
+                <a href="#" id="showRegister">Register</a>
+            </p>
+        </div>
+        </div>
 </div>
- 
+
 <script src="accordion.js"></script>
+<script src="access.js"></script>
+<script src="popup.js"></script>
 </body>
 </html>
