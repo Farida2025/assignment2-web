@@ -84,6 +84,10 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    max-width: 1200px; /* Выберите желаемую ширину */
+    width: 100%;
+    margin: 0 auto; /* Центрируем .main в контейнере */
 }
 
 .main h2 {
@@ -236,18 +240,20 @@ footer {
 .contact-box p { margin: 5px 0 0; color: #bbb; font-size: 14px; }
 .news-list .media-card a { color: #1e90ff; text-decoration: none; }
 .news-list .media-card a:hover { text-decoration: underline; }
-
-
+/* ======================================= */
+/* Стили для ФОРМЫ (Login и Contact) */
+/* ======================================= */
 
 .form-wrapper {
+    /* Максимальная ширина формы, чтобы она не растягивалась на весь экран */
     width: 100%;
     max-width: 450px; 
-    background: #1c1c1c; 
+    background: #1c1c1c; /* Темный фон формы */
     border-radius: 8px;
     padding: 25px;
     margin-top: 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-    text-align: left; 
+    text-align: left; /* Элементы формы должны выравниваться по левому краю */
 }
 
 .form-wrapper h3 {
@@ -263,12 +269,13 @@ footer {
 }
 
 .form-group label {
-    display: block;
+    display: block; /* Заставляет метку занимать всю ширину */
     margin-bottom: 5px;
     font-weight: bold;
     color: #ccc;
 }
 
+/* Стилизация всех полей ввода и текстовых областей */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="password"],
@@ -279,20 +286,41 @@ footer {
     border-radius: 4px;
     background-color: #333;
     color: #fff;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Важно: включает padding/border в общую ширину */
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: red; 
+    border-color: red; /* Красная рамка при фокусе */
     outline: none;
 }
 
 .form-group textarea {
-    resize: vertical; 
+    resize: vertical; /* Разрешить изменение размера только по вертикали */
 }
 
-#submitBtn, #regSubmitBtn, #logSubmitBtn { 
+
+
+/* СТИЛИ ДЛЯ СООБЩЕНИЙ ОБ ОШИБКАХ/УСПЕХЕ */
+.error-message {
+    color: yellow; /* Желтый для привлечения внимания к ошибке */
+    font-size: 12px;
+    margin-top: 5px;
+    display: none; /* Изначально скрыты, JS их показывает */
+}
+
+.success-message {
+    color: #3fef3f; /* Зеленый для успеха */
+    font-size: 16px;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #3fef3f;
+    border-radius: 4px;
+    text-align: center;
+    display: none; /* Изначально скрыты */
+}
+
+#submitBtn, #regSubmitBtn, #logSubmitBtn { /* Добавлен #logSubmitBtn */
     width: 100%;
     padding: 12px;
     background-color: red;
@@ -305,36 +333,23 @@ footer {
     margin-top: 10px;
 }
 
-#submitBtn:hover, #regSubmitBtn:hover, #logSubmitBtn:hover { 
+#submitBtn:hover, #regSubmitBtn:hover, #logSubmitBtn:hover { /* Добавлен #logSubmitBtn:hover */
     background-color: darkred;
 }
 
-.error-message {
-    color: yellow; 
-    font-size: 12px;
-    margin-top: 5px;
-    display: none; 
-}
-
-.success-message {
-    color: #3fef3f; 
-    font-size: 16px;
-    margin-top: 15px;
-    padding: 10px;
-    border: 1px solid #3fef3f;
-    border-radius: 4px;
-    text-align: center;
-    display: none; 
-}
+/* ======================================= */
+/* Стили для ссылок переключения на login.html */
+/* ======================================= */
 
 .switch-link {
     text-align: center;
     margin-top: 15px;
     font-size: 14px;
-    color: #ccc; 
+    color: #ccc; /* Цвет текста "Already have an account?" */
 }
 
 .switch-link a {
+    /* Применяем синий цвет, как у "Read more" */
     color: #1e90ff; 
     text-decoration: none;
     font-weight: bold;
@@ -342,6 +357,91 @@ footer {
 }
 
 .switch-link a:hover {
-    color: #4dc2ff; 
+    color: #4dc2ff; /* Более светлый синий при наведении */
     text-decoration: underline;
+}
+
+/* ... (Ваши существующие стили) ... */
+
+/* ======================================= */
+/* Стили для раздела FAQ (Аккордеон) */
+/* ======================================= */
+.content-wrapper {
+    max-width: 1200px; /* Или 800px, если вам нужно, чтобы он был узким */
+    margin: 0 auto;
+    padding: 0 20px; /* Отступы по бокам для маленьких экранов */
+}
+
+.faq-section {
+    max-width: 100%; /* Теперь наследует max-width от .content-wrapper */
+    /* Убираем margin: 40px auto 20px, так как центрирование делает .content-wrapper */
+    margin: 40px 0 20px; 
+    padding: 0 20px; /* Убираем padding: 0 20px, если .content-wrapper его уже имеет */
+    width: 100%;
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden; 
+    background-color: #1e1e1e;
+}
+
+.faq-question {
+    background-color: #2c2c2c;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.faq-question:hover {
+    background-color: #3a3a3a;
+}
+
+/* Индикатор (+/-) */
+.faq-question::after {
+    content: '\002B'; /* Знак плюса */
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.faq-question.active::after {
+    content: '\2212'; /* Знак минуса */
+}
+
+/* Контейнер ответа: СКРЫТОЕ СОСТОЯНИЕ ПО УМОЛЧАНИЮ */
+.faq-answer {
+    padding: 0 15px; 
+    background-color: #222;
+    /* Ключевые свойства для аккордеона: */
+    max-height: 0; 
+    overflow: hidden;
+    /* Ключевое свойство для ПЛАВНОГО ПЕРЕХОДА: */
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.faq-answer p {
+    margin: 0;
+    line-height: 1.6;
+    color: #ccc;
 }
