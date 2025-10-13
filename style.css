@@ -237,3 +237,111 @@ footer {
 .news-list .media-card a { color: #1e90ff; text-decoration: none; }
 .news-list .media-card a:hover { text-decoration: underline; }
 
+
+
+.form-wrapper {
+    width: 100%;
+    max-width: 450px; 
+    background: #1c1c1c; 
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    text-align: left; 
+}
+
+.form-wrapper h3 {
+    text-align: center;
+    color: red;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: red; 
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical; 
+}
+
+#submitBtn, #regSubmitBtn, #logSubmitBtn { 
+    width: 100%;
+    padding: 12px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+#submitBtn:hover, #regSubmitBtn:hover, #logSubmitBtn:hover { 
+    background-color: darkred;
+}
+
+.error-message {
+    color: yellow; 
+    font-size: 12px;
+    margin-top: 5px;
+    display: none; 
+}
+
+.success-message {
+    color: #3fef3f; 
+    font-size: 16px;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #3fef3f;
+    border-radius: 4px;
+    text-align: center;
+    display: none; 
+}
+
+.switch-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ccc; 
+}
+
+.switch-link a {
+    color: #1e90ff; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.switch-link a:hover {
+    color: #4dc2ff; 
+    text-decoration: underline;
+}
