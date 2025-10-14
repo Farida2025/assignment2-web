@@ -438,3 +438,22 @@ footer {
     color: red; 
     margin-top: 15px;
 }
+
+.action-button {
+    background-color: red; 
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+    background-color: red;
+    transform: translateY(-2px);
+}
