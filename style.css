@@ -374,9 +374,7 @@ footer {
     background-color: darkred;
 }
 .modal {
-
     display: none; 
-    
     position: fixed;
     z-index: 100;
     left: 0;
@@ -385,10 +383,8 @@ footer {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7); 
-    
     align-items: center; 
     justify-content: center; 
-    
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
@@ -457,3 +453,30 @@ footer {
     background-color: red;
     transform: translateY(-2px);
 }
+
+.main-header-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.main-header-wrapper h2 {
+    margin: 0; 
+}
+
+.datetime-display {
+    color: #fff; 
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid red; 
+    border-radius: 4px;
+    background-color: #111;
+}
+
+.news-title {
+    text-align: center; 
+}
+
