@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<button id="color-switcher-btn">🎨</button>
 <header>
     <div class="photo">
-        <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
+        <img src="images/photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
     </div>
     <div class="menu">
         <a href="index.html">Home</a>
@@ -29,35 +29,15 @@
         <h2 class="news-title">Latest Movie & Actor News</h2>
         <span id="currentDateTime" class="datetime-display"></span>
         </div>
-        <div class="news-list">
-
+        <div class="news-list" id="news-container">
             <div class="media-card">
-                <img src="https://ew.com/thmb/axebZBmTYHQj1N2Ps2-i25CxwPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/spider-man-no-way-home-091924-ac9d2d7aa2ba4ca08fbc98962ca6bb1d.jpg" alt="Spider man">
+                <img src="images/spider.jpg" alt="Spider man">
                 <div>
                     <h3>Tom Holland Hospitalised After Spider-Man Fall</h3>
                     <p>Tom Holland suffered a minor concussion on the set of <em>Spider-Man: Brand New Day</em>. Shooting is expected to continue soon.
                         <a href="https://ew.com/tom-holland-hospitalized-after-fall-on-spider-man-set-11814268" target="_blank">Read more</a></p>
                 </div>
             </div>
-
-            <div class="media-card">
-                <img src="https://ew.com/thmb/zqYaYseOZYRbsi_meQsOUEwAEGk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Martin-Scorsese--Leonardo-DiCaprio-Jennifer-Lawrence-091825-b8752f355192454e91d200ff84edf135.jpg" alt="Martin Scorsese, Leonardo DiCaprio, and Jennifer Lawrence.">
-                <div>
-                    <h3>Martin Scorsese’s Next Film Announced</h3>
-                    <p>Martin Scorsese is teaming up with Leonardo DiCaprio and Jennifer Lawrence for <em>What Happens at Night</em>, based on the novel.
-                        <a href="https://ew.com/martin-scorsese-sets-next-film-leonardo-dicaprio-jennifer-lawrence-what-happens-at-night-11813305" target="_blank">Read more</a></p>
-                </div>
-            </div>
-
-            <div class="media-card">
-                <img src="https://static.toiimg.com/thumb/msid-123913087,imgsize-22212,width-400,resizemode-4/mary-mcdonnell.jpg" alt="Mary McDonnell">
-                <div>
-                    <h3>Mary McDonnell Joins Marvel</h3>
-                    <p>Mary McDonnell is set to star in Marvel’s upcoming thriller <em>One Second After</em>.
-                        <a href="https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/mary-mcdonnell-joins-marvel-cinematic-universe-to-star-in-thriller-one-second-after-deets-inside/articleshow/123913112.cms" target="_blank">Read more</a></p>
-                </div>
-            </div>
-
             <div class="media-card">
                 <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/02/tron-ares-ares-jared-leto.jpg" alt="Tron: Ares">
                 <div>
@@ -68,15 +48,21 @@
             </div>
 
         </div>
+        
+        <div class="load-more-container">
+            <button id="load-more-btn">Read more</button>
+        </div>
 
         <footer>
             Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
         </footer>
     </div>
-
-    
 </div>
+
 <script src="datetime.js"></script> 
+<script src="backgroundColor.js"></script>
+<script src="loadMoreNews.js"></script>
+<script src="keyboardNav.js"></script>
+<script src="sounds.js"></script>
 </body>
 </html>
- 

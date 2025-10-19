@@ -1,79 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MyFlix - Series</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>MyFlix - Series</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="filters.css" />
 </head>
 <body>
+  <button id="color-switcher-btn">🎨</button>
 
-<header>
+  <header>
     <div class="photo">
-        <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
+      <img src="images/photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo" />
     </div>
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="movies.html">Movies</a>
-        <a href="series.html" class="active">Series</a>
-        <a href="cartoons.html" >Cartoons</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-        
-    </div>
-</header>
+    <nav class="menu" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="movies.html">Movies</a>
+      <a href="series.html" class="active">Series</a>
+      <a href="cartoons.html">Cartoons</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<div class="container">
-    <div class="main">
-        <h2>Series</h2>
+  <div class="container">
+    <div class="main filters">
+      <h2>Series</h2>
 
-        <div class="series-list">
-            <div class="series-card">
-                <img src="https://upload.wikimedia.org/wikipedia/ru/f/f7/Stranger_Things_season_2.jpg" alt="Stranger Things">
-                <div class="series-info">
-                    <h3>Stranger Things</h3>
-                    <p><b>Years:</b> 2016 – present</p>
-                    <p><b>Actors:</b> Millie Bobby Brown, Finn Wolfhard, David Harbour</p>
-                    <p><b>Plot:</b> Kids in Hawkins face supernatural threats from the Upside Down.</p>
-                    <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
-                </div>
-            </div>
+      <section class="filter-controls" aria-label="Content filters">
+        <h1>Content Filter</h1>
 
-            <div class="series-card">
-                <img src="https://avatars.mds.yandex.net/i?id=a1fe7340327511ab49421742736d8d91_l-5294324-images-thumbs&n=13" alt="Game of Thrones">
-                <div class="series-info">
-                    <h3>Game of Thrones</h3>
-                    <p><b>Years:</b> 2011 – 2019</p>
-                    <p><b>Actors:</b> Emilia Clarke, Kit Harington, Peter Dinklage</p>
-                    <p><b>Plot:</b> Noble families fight for the Iron Throne while facing betrayal, war, and an ancient enemy.</p>
-                    <p><b>IMDb Rating:</b> ⭐ 9.2/10</p>
-                </div>
-            </div>
+        <div class="select-group" id="dropdown-filters">
+          
 
-            <div class="series-card">
-                <img src="https://avatars.mds.yandex.net/i?id=8f173048a66a26082906a2ebb70c0bfc_l-10384973-images-thumbs&n=13" alt="Wednesday">
-                <div class="series-info">
-                    <h3>Wednesday</h3>
-                    <p><b>Years:</b> 2022 – present</p>
-                    <p><b>Actors:</b> Jenna Ortega, Catherine Zeta-Jones, Luis Guzmán</p>
-                    <p><b>Plot:</b> Wednesday investigates murders at Nevermore Academy and discovers her psychic abilities.</p>
-                    <p><b>IMDb Rating:</b> ⭐ 8.0/10</p>
-                </div>
-            </div>
+          <select class="filter-select" id="filter-genres" data-filter-key="genres">
+            <option value="">All Genres</option>
+            <option value="action">Action</option>
+            <option value="adventure">Adventure</option>
+            <option value="animation">Animation</option>
+            <option value="biography">Biography</option>
+            <option value="comedy">Comedy</option>
+            <option value="crime">Crime</option>
+            <option value="drama">Drama</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="history">History</option>
+            <option value="sci-fi">Sci-Fi</option>
+        </select>
+
+                <select class="filter-select" id="filter-countries" data-filter-key="countries">
+            <option value="">All Countries</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="russia">Russia</option>
+            <option value="korea">Korea</option>
+            <option value="turkey">Turkey</option>
+        </select>
+
+        <select class="filter-select" id="filter-years" data-filter-key="year">
+            <option value="">All Years</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2020s">2020 - 2029</option>
+            <option value="2010s">2010 - 2019</option>
+            <option value="2000s">2000 - 2009</option>
+          </select>
+
+          <select class="filter-select" id="filter-rating" data-filter-key="rating">
+            <option value="">Any Rating</option>
+            <option value="9+">9+</option>
+            <option value="8+">8+</option>
+            <option value="7+">7+</option>
+            <option value="6+">6+</option>
+          </select>
         </div>
 
-        <div style="text-align: center; margin-bottom: 25px;">
-             <button id="colorChangeBtn" class="action-button"> Change background color</button>
+        <button id="reset-filters-btn">Reset Filters</button>
+
+        <div class="active-filters-section">
+          <strong>Active filters:</strong>
+          <div id="active-filters-display">
+            <span id="no-filters-msg" style="color:#6c757d;">No filters selected.</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="series-list" id="series-list">
+        <div
+          class="series-card rateable-card"
+          data-series-id="stranger-things"
+          data-genres="drama,fantasy"
+          data-countries="usa"
+          data-year="2010s,2020s"
+          data-imdb-rating="8.7"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/ru/f/f7/Stranger_Things_season_2.jpg"
+            alt="Stranger Things"
+          />
+          <div class="series-info">
+            <h3>Stranger Things</h3>
+            <p><b>Years:</b> 2016 – present</p>
+            <p><b>Actors:</b> Millie Bobby Brown, Finn Wolfhard, David Harbour</p>
+            <p><b>Plot:</b> Kids in Hawkins face supernatural threats from the Upside Down.</p>
+            <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
+            <div class="user-rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <p class="rating-message">Click a star to rate!</p>
+          </div>
         </div>
 
-        <footer>
-            &copy; Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
-        </footer>
-        
-    </div>
+        <div
+          class="series-card rateable-card"
+          data-series-id="game-of-thrones"
+          data-genres="drama,fantasy"
+          data-countries="usa,uk"
+          data-year="2010s"
+          data-imdb-rating="9.2"
+        >
+          <img
+            src="https://avatars.mds.yandex.net/i?id=a1fe7340327511ab49421742736d8d91_l-5294324-images-thumbs&n=13"
+            alt="Game of Thrones"
+          />
+          <div class="series-info">
+            <h3>Game of Thrones</h3>
+            <p><b>Years:</b> 2011 – 2019</p>
+            <p><b>Actors:</b> Emilia Clarke, Kit Harington, Peter Dinklage</p>
+            <p><b>Plot:</b> Noble families fight for the Iron Throne while facing betrayal, war, and an ancient enemy.</p>
+            <p><b>IMDb Rating:</b> ⭐ 9.2/10</p>
+            <div class="user-rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <p class="rating-message">Click a star to rate!</p>
+          </div>
+        </div>
 
-    
-</div>
-<script src="background.js"></script> 
+        <div
+          class="series-card rateable-card"
+          data-series-id="wednesday"
+          data-genres="drama,fantasy"
+          data-countries="usa"
+          data-year="2020s"
+          data-imdb-rating="8.0"
+        >
+          <img
+            src="https://avatars.mds.yandex.net/i?id=8f173048a66a26082906a2ebb70c0bfc_l-10384973-images-thumbs&n=13"
+            alt="Wednesday"
+          />
+          <div class="series-info">
+            <h3>Wednesday</h3>
+            <p><b>Years:</b> 2022 – present</p>
+            <p><b>Actors:</b> Jenna Ortega, Catherine Zeta-Jones, Luis Guzmán</p>
+            <p><b>Plot:</b> Wednesday investigates murders at Nevermore Academy and discovers her psychic abilities.</p>
+            <p><b>IMDb Rating:</b> ⭐ 8.0/10</p>
+            <div class="user-rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <p class="rating-message">Click a star to rate!</p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        &copy; Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
+      </footer>
+    </div>
+  </div>
+
+  <script src="rating.js"></script>
+  <script src="backgroundColor.js"></script>
+  <script src="keyboardNav.js"></script>
+  <script src="filtering.js"></script>
+  <script src="sounds.js"></script>
 </body>
 </html>
- 

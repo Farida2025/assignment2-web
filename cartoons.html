@@ -1,85 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <title>Cartoons - MyFlix</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyFlix - Cartoons</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="filters.css" />
 </head>
 <body>
+  <button id="color-switcher-btn">🎨</button>
 
-<header>
+  <header>
     <div class="photo">
-        <img src="photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
+      <img src="images/photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo" />
     </div>
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="movies.html">Movies</a>
-        <a href="series.html">Series</a>
-        <a href="cartoons.html" class="active">Cartoons</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</header>
+    <nav class="menu" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="movies.html">Movies</a>
+      <a href="series.html">Series</a>
+      <a href="cartoons.html" class="active">Cartoons</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<div class="container">
-    <div class="main">
-        <h2>Cartoons</h2>
-        <div class="cards-container">
+  <div class="container">
+    <div class="main filters">
+      <h2>Cartoons</h2>
 
-            <div class="media-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8osYPFkoJ43Ej9K_h3vobKzc-y40s0UqU1w&s" alt="SpongeBob">
-                <div>
-                    <h3>SpongeBob SquarePants</h3>
-                    <p><b>Years:</b> 1999 – present</p>
-                    <p>Adventures of SpongeBob and his friends in Bikini Bottom.</p>
-                </div>
-            </div>
+      <section class="filter-controls" aria-label="Content filters">
+        <h1>Content Filter</h1>
 
-            <div class="media-card">
-                <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14279_p_v10_aa.jpg" alt="Tom and Jerry">
-                <div>
-                    <h3>Tom and Jerry</h3>
-                    <p><b>Years:</b> 1940 – present</p>
-                    <p>Classic rivalry between a mischievous mouse and a clumsy cat.</p>
-                </div>
-            </div>
+        <div class="select-group" id="dropdown-filters">
+            <select class="filter-select" id="filter-genres" data-filter-key="genres">
+            <option value="">All Genres</option>
+            <option value="action">Action</option>
+            <option value="adventure">Adventure</option>
+            <option value="animation">Animation</option>
+            <option value="biography">Biography</option>
+            <option value="comedy">Comedy</option>
+            <option value="crime">Crime</option>
+            <option value="drama">Drama</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="history">History</option>
+            <option value="sci-fi">Sci-Fi</option>
+        </select>
 
-            <div class="media-card">
-                <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9248224_b_v8_ax.jpg" alt="Gravity Falls">
-                <div>
-                    <h3>Gravity Falls</h3>
-                    <p><b>Years:</b> 2012 – 2016</p>
-                    <p>Dipper and Mabel uncover supernatural mysteries in Gravity Falls.</p>
-                </div>
-            </div>
+                <select class="filter-select" id="filter-countries" data-filter-key="countries">
+            <option value="">All Countries</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="russia">Russia</option>
+            <option value="korea">Korea</option>
+            <option value="turkey">Turkey</option>
+        </select>
 
-            <div class="media-card">
-                <img src="https://m.media-amazon.com/images/I/61Wps+FMG-L._UF1000,1000_QL80_.jpg" alt="Avatar">
-                <div>
-                    <h3>Avatar: The Last Airbender</h3>
-                    <p><b>Years:</b> 2005 – 2008</p>
-                    <p>Aang must master the four elements to bring peace to the world.</p>
-                </div>
-            </div>
+          <select class="filter-select" id="filter-years" data-filter-key="year">
+            <option value="">All Years</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2020s">2020 - 2029</option>
+            <option value="2010s">2010 - 2019</option>
+            <option value="2000s">2000 - 2009</option>
+          </select>
 
-            <div class="media-card">
-                <img src="https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg" alt="Rick and Morty">
-                <div>
-                    <h3>Rick and Morty</h3>
-                    <p><b>Years:</b> 2013 – present</p>
-                    <p>A mad scientist and his grandson go on chaotic adventures across dimensions.</p>
-                </div>
-            </div>
-
+          <select class="filter-select" id="filter-rating" data-filter-key="rating">
+            <option value="">Any Rating</option>
+            <option value="9+">9+</option>
+            <option value="8+">8+</option>
+            <option value="7+">7+</option>
+            <option value="6+">6+</option>
+          </select>
         </div>
 
-        <footer>
-            Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
-        </footer>
+        <button id="reset-filters-btn">Reset Filters</button>
+
+        <div class="active-filters-section">
+          <strong>Active filters:</strong>
+          <div id="active-filters-display">
+            <span id="no-filters-msg" style="color:#6c757d;">No filters selected.</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="cards-container" id="cartoons-list">
+
+        <div class="media-card rateable-card"
+             data-cartoon-id="spongebob"
+             data-genres="animation,comedy"
+             data-countries="usa"
+             data-year="1990s,2000s,2010s,2020s"
+             data-imdb-rating="8.2">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8osYPFkoJ43Ej9K_h3vobKzc-y40s0UqU1w&s" alt="SpongeBob SquarePants">
+          <div>
+            <h3>SpongeBob SquarePants</h3>
+            <p><b>Years:</b> 1999 – present</p>
+            <p>Adventures of SpongeBob and his friends in Bikini Bottom.</p>
+            <div class="user-rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <p class="rating-message">Click a star to rate!</p>
+          </div>
+        </div>
+
+        <div class="media-card rateable-card"
+             data-cartoon-id="tom-jerry"
+             data-genres="animation,comedy"
+             data-countries="usa"
+             data-year="1940s,1950s,1960s,1970s,1980s,1990s,2000s,2010s,2020s"
+             data-imdb-rating="8.5">
+          <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14279_p_v10_aa.jpg" alt="Tom and Jerry">
+          <div>
+            <h3>Tom and Jerry</h3>
+            <p><b>Years:</b> 1940 – present</p>
+            <p>Classic rivalry between a mischievous mouse and a clumsy cat.</p>
+            <div class="user-rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <p class="rating-message">Click a star to rate!</p>
+          </div>
+        </div>
+
+        <div class="media-card rateable-card"
+             data-cartoon-id="gravity-falls"
+             data-genres="animation,adventure,comedy"
+             data-countries="usa"
+             data-year="2010s"
+             data-imdb-rating="8.9">
+          <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9248224_b_v8_ax.jpg" alt="Gravity Falls">
+          <div>
+            <h3>Gravity Falls</h3>
+            <p><b>Years:</b> 2012 – 2016</p>
+            <p>Dipper and Mabel uncover supernatural mysteries in Gravity Falls.</p>
+            <div class="user-rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <p class="rating-message">Click a star to rate!</p>
+          </div>
+        </div>
+
+        <div class="media-card rateable-card"
+             data-cartoon-id="avatar-tla"
+             data-genres="animation,action,adventure,fantasy"
+             data-countries="usa"
+             data-year="2000s"
+             data-imdb-rating="9.2">
+          <img src="https://m.media-amazon.com/images/I/61Wps+FMG-L._UF1000,1000_QL80_.jpg" alt="Avatar: The Last Airbender">
+          <div>
+            <h3>Avatar: The Last Airbender</h3>
+            <p><b>Years:</b> 2005 – 2008</p>
+            <p>Aang must master the four elements to bring peace to the world.</p>
+            <div class="user-rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <p class="rating-message">Click a star to rate!</p>
+          </div>
+        </div>
+
+        <div class="media-card rateable-card"
+             data-cartoon-id="rick-morty"
+             data-genres="animation,comedy,sci-fi"
+             data-countries="usa"
+             data-year="2010s,2020s"
+             data-imdb-rating="9.1">
+          <img src="https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg" alt="Rick and Morty">
+          <div>
+            <h3>Rick and Morty</h3>
+            <p><b>Years:</b> 2013 – present</p>
+            <p>A mad scientist and his grandson go on chaotic adventures across dimensions.</p>
+            <div class="user-rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <p class="rating-message">Click a star to rate!</p>
+          </div>
+        </div>
+
+      </div>
+
+      <footer>
+        Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
+      </footer>
     </div>
+  </div>
 
-  
-</div>
-
+  <script src="rating.js"></script>
+  <script src="backgroundColor.js"></script>
+  <script src="keyboardNav.js"></script>
+  <script src="filtering.js"></script>
+  <script src="sounds.js"></script>
 </body>
 </html>
