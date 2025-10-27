@@ -1,4 +1,3 @@
-
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     countries: 'Country',
     year: 'Year',
     rating: 'Rating',
+    search: 'Search'
   };
 
   const filterSystem = scope.querySelector('.filter-controls');
@@ -19,17 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!filterSystem || !activeFiltersDisplay) return;
 
   const allSelects = Array.from(filterSystem.querySelectorAll('.filter-select'));
+  const searchInput = scope.querySelector('#movieSearch');
 
-  const list =
-    scope.querySelector('#series-list') ||
-    scope.querySelector('#movies-list') ||
-    scope.querySelector('#cartoons-list') ||
-    scope.querySelector('.series-list') ||
-    scope.querySelector('.cards-container');
-
+  const list = scope.querySelector('#movies-list');
   if (!list) return;
 
-  const cards = Array.from(list.querySelectorAll('.series-card, .media-card'));
+  const cards = Array.from(list.querySelectorAll('.media-card'));
   if (!cards.length) return;
 
   const currentFilters = {};
@@ -59,6 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
           continue;
         }
 
+        if (key === 'search') {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          if (!title.includes(rawVal)) { visible = false; break; }
+          continue;
+        }
+
         const required = key === 'year' ? normalizeYearFilter(rawVal) : norm(rawVal);
         const attr = card.getAttribute(`data-${key}`);
         if (!attr) { visible = false; break; }
@@ -79,18 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const val = currentFilters[key];
       if (!val) continue;
 
-      const selectEl = scope.querySelector(`#filter-${key}`);
-      const keyText = filterKeyTranslations[key] || key;
       let text = val;
-
-      if (selectEl) {
-        const opt = selectEl.querySelector(`option[value="${val}"]`);
-        if (opt) text = `${keyText}: ${opt.textContent}`;
+      if (key !== 'search') {
+        const selectEl = scope.querySelector(`#filter-${key}`);
+        const keyText = filterKeyTranslations[key] || key;
+        if (selectEl) {
+          const opt = selectEl.querySelector(`option[value="${val}"]`);
+          if (opt) text = `${keyText}: ${opt.textContent}`;
+        }
+      } else {
+        text = `Search: ${val}`;
       }
 
       const tag = document.createElement('span');
       tag.className = 'filter-tag';
-      tag.innerHTML = `${text} <span data-filter-remove="${key}" aria-label="Remove filter" title="Remove filter">&times;</span>`;
+      tag.innerHTML = `${text} <span data-filter-remove="${key}" title="Remove filter">&times;</span>`;
       tag.querySelector('[data-filter-remove]').addEventListener('click', () => removeFilter(key));
       activeFiltersDisplay.appendChild(tag);
       count++;
@@ -108,8 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function removeFilter(key) {
     delete currentFilters[key];
-    const select = scope.querySelector(`#filter-${key}`);
-    if (select) select.value = '';
+    if (key !== 'search') {
+      const select = scope.querySelector(`#filter-${key}`);
+      if (select) select.value = '';
+    } else if (searchInput) {
+      searchInput.value = '';
+    }
     updateActiveFiltersDisplay();
   }
 
@@ -120,11 +128,19 @@ document.addEventListener('DOMContentLoaded', () => {
     select.addEventListener('change', function () { setFilter(key, this.value); });
   });
 
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      currentFilters['search'] = searchInput.value.trim().toLowerCase();
+      updateActiveFiltersDisplay();
+    });
+  }
+
   const resetBtn = scope.querySelector('#reset-filters-btn');
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       for (const k in currentFilters) delete currentFilters[k];
       allSelects.forEach((s) => (s.value = ''));
+      if (searchInput) searchInput.value = '';
       updateActiveFiltersDisplay();
     });
   }

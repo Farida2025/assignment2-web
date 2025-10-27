@@ -6,7 +6,6 @@
   <title>MyFlix - Movies</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="filters.css" />
-  <!-- Подключение jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
@@ -32,6 +31,9 @@
 
       <section class="filter-controls" aria-label="Content filters">
         <h1>Content Filter</h1>
+
+        <!-- Поиск по названию -->
+        <input type="text" id="movieSearch" placeholder="Search by movie title..." />
 
         <div class="select-group" id="dropdown-filters">
           <select class="filter-select" id="filter-genres" data-filter-key="genres">
@@ -87,6 +89,7 @@
 
       <div class="cards-container" id="movies-list">
 
+    
         <div class="media-card rateable-card"
              data-movie-id="avengers-endgame"
              data-genres="action,adventure,sci-fi"
@@ -240,7 +243,7 @@
     </div>
   </div>
 
-  <script src="rating.js"></script>
+   <script src="rating.js"></script>
   <script src="backgroundColor.js"></script>
   <script src="keyboardNav.js"></script>
   <script src="filtering.js"></script>
