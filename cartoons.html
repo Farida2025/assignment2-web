@@ -9,7 +9,9 @@
   <!-- Подключение jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body>
+  <div id="progressContainer">
+    <div id="progressBar"></div>
+  </div>
   <button id="color-switcher-btn">🎨</button>
 
   <header>
@@ -198,6 +200,21 @@
         </div>
 
       </div>
+      <section class="stats-section">
+        <div class="stat">
+          <h2 class="count" data-target="5">0</h2>
+          <p>Cartoons Uploaded</p>
+        </div>
+        <div class="stat">
+          <h2 class="count" data-target="5000">0</h2>
+          <p>Viewers</p>
+        </div>
+        <div class="stat">
+          <h2 class="count" data-target="300">0</h2>
+          <p>Likes</p>
+        </div>
+      </section>
+
 
       <footer>
         Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
@@ -210,5 +227,8 @@
   <script src="keyboardNav.js"></script>
   <script src="filtering.js"></script>
   <script src="sounds.js"></script>
+  <script src="progressBar.js"></script>
+  <script src="counter.js"></script>
+
 </body>
 </html>

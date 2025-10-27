@@ -933,4 +933,41 @@ footer {
   overflow: hidden;
   text-align: center;
 }
+#progressContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #eee;
+  z-index: 9999;
+}
+
+#progressBar {
+  height: 6px;
+  width: 0%;
+  background: #f3f720;
+  transition: width 0.2s;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 100px 0;
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 3rem;
+  color: #f3f720;
+  margin: 0;
+  font-weight: bold;
+}
+
+.stat p {
+  font-size: 1.2rem;
+  color: #555;
+}
 
