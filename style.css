@@ -805,3 +805,22 @@ footer {
 
 .hover-preview-card.is-playing .poster { opacity: 0; }
 .hover-preview-card.is-playing .preview { opacity: 1; }
+ 
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content.centered {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}

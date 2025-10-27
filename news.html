@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>News - MyFlix</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Подключение jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 <button id="color-switcher-btn">🎨</button>
@@ -19,15 +21,13 @@
         <a href="news.html" class="active">News</a>
         <a href="contact.html">Contact</a>
     </div>
-    
-    </div>
 </header>
 
 <div class="container">
     <div class="main">
         <div class="main-header-wrapper">
-        <h2 class="news-title">Latest Movie & Actor News</h2>
-        <span id="currentDateTime" class="datetime-display"></span>
+            <h2 class="news-title">Latest Movie & Actor News</h2>
+            <span id="currentDateTime" class="datetime-display"></span>
         </div>
         <div class="news-list" id="news-container">
             <div class="media-card">
@@ -46,7 +46,6 @@
                         <a href="https://en.wikipedia.org/wiki/Tron%3A_Ares" target="_blank">Read more</a></p>
                 </div>
             </div>
-
         </div>
         
         <div class="load-more-container">

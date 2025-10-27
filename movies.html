@@ -6,6 +6,8 @@
   <title>MyFlix - Movies</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="filters.css" />
+  <!-- Подключение jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   <button id="color-switcher-btn">🎨</button>
@@ -32,7 +34,7 @@
         <h1>Content Filter</h1>
 
         <div class="select-group" id="dropdown-filters">
-                <select class="filter-select" id="filter-genres" data-filter-key="genres">
+          <select class="filter-select" id="filter-genres" data-filter-key="genres">
             <option value="">All Genres</option>
             <option value="action">Action</option>
             <option value="adventure">Adventure</option>
@@ -44,16 +46,16 @@
             <option value="fantasy">Fantasy</option>
             <option value="history">History</option>
             <option value="sci-fi">Sci-Fi</option>
-        </select>
+          </select>
 
-                <select class="filter-select" id="filter-countries" data-filter-key="countries">
+          <select class="filter-select" id="filter-countries" data-filter-key="countries">
             <option value="">All Countries</option>
             <option value="usa">USA</option>
             <option value="uk">UK</option>
             <option value="russia">Russia</option>
             <option value="korea">Korea</option>
             <option value="turkey">Turkey</option>
-        </select>
+          </select>
 
           <select class="filter-select" id="filter-years" data-filter-key="year">
             <option value="">All Years</option>
@@ -214,7 +216,8 @@
           <img src="https://avatars.mds.yandex.net/i?id=2123585a90a69b292e3bed6b13f95199f40fa11a-5236263-images-thumbs&n=13" alt="The Dark Knight">
           <div>
             <h3>The Dark Knight (2008)</h3>
-            <p><b>Director:</b> Christopher Nolan</p>
+            <p><b>Director:</b> Christopher Nolan
+
             <p><b>Genre:</b> Action, Crime, Drama</p>
             <p><b>Plot:</b> Batman faces the Joker, who terrorizes Gotham City.</p>
             <p><b>IMDb Rating:</b> ⭐ 9.0/10</p>
