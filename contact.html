@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Contact - MyFlix</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faqHighlight.css"> <!-- Для подсветки поиска FAQ -->
     <!-- Подключение jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -55,7 +56,37 @@
 
                 <div id="formFeedback" class="feedback-message"></div>
             </form>
-            
+
+            <!-- FAQ Search -->
+            <div class="faq-search" style="margin: 40px auto; text-align: center; max-width: 400px;">
+                <input type="text" id="faqSearch" placeholder="Search FAQ..." autocomplete="off" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;" />
+            </div>
+
+            <!-- FAQ Section -->
+            <section class="faq-section" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="text-align: center;">Frequently Asked Questions (FAQ)</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question">How do I create an account?</button>
+                    <div class="faq-answer">
+                        <p>You can create an account by clicking the <strong>Sign Up</strong> button in the top right corner of the navigation menu. You will need to enter your email and create a password.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Can I watch movies without a subscription?</button>
+                    <div class="faq-answer">
+                        <p>No. Full access to our movie library and series is available only to <strong>active subscribers</strong>. Please sign up or log in to start watching.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Can I watch content without an internet connection?</button>
+                    <div class="faq-answer">
+                        <p>Yes, you can download selected movies and series to your device to watch offline.</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <footer>
@@ -68,5 +99,9 @@
 <script src="backgroundColor.js"></script>
 <script src="keyboardNav.js"></script>
 <script src="sounds.js"></script>
+<script src="faqHighlight.js"></script> 
+<script src="accordion.js"></script>
+
+
 </body>
 </html>

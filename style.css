@@ -848,3 +848,89 @@ footer {
   box-shadow: 0 2px 10px rgba(0,123,255,0.3);
   outline: none;
 }
+
+/* Поиск новостей */
+.search-container {
+    margin: 20px auto 40px auto; /* верх 20px, низ 40px */
+    text-align: center;
+}
+
+#newsSearch {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#newsSearch:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 10px rgba(0,123,255,0.3);
+    outline: none;
+}
+
+/* Стиль для автоподсказок */
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff; /* белый фон */
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.autocomplete-suggestion {
+    padding: 8px;
+    cursor: pointer;
+    color: #000; /* черный текст */
+}
+
+.autocomplete-suggestion:hover {
+    background-color: #f0f0f0;
+}
+
+/* Центрируем поиск */
+.faq-search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#faqSearch {
+  width: 50%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Подсветка текста */
+.highlight {
+  background-color: yellow;
+  color: black;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between; /* равномерное расстояние между карточками */
+  flex-wrap: wrap; /* чтобы карточки переносились на новую строку при необходимости */
+  gap: 20px; /* дополнительный отступ между карточками */
+}
+
+.home-card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 карточки в ряд с учетом gap */
+  max-width: 300px; /* можно подогнать размер */
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+

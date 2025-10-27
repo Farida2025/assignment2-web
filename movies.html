@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>MyFlix - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MyFlix - Movies</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="filters.css" />
+  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 </head>
+
 <body>
   <button id="color-switcher-btn">🎨</button>
 
@@ -15,238 +17,165 @@
     <div class="photo">
       <img src="images/photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo" />
     </div>
-    <nav class="menu" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="movies.html" class="active">Movies</a>
+
+    <nav class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="movies.html">Movies</a>
       <a href="series.html">Series</a>
       <a href="cartoons.html">Cartoons</a>
       <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
+      <button id="openAccessModal" class="nav-button">Sign Up</button>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="main filters">
-      <h2>Movies</h2>
-
-      <section class="filter-controls" aria-label="Content filters">
-        <h1>Content Filter</h1>
-
-        <!-- Поиск по названию -->
-        <input type="text" id="movieSearch" placeholder="Search by movie title..." />
-
-        <div class="select-group" id="dropdown-filters">
-          <select class="filter-select" id="filter-genres" data-filter-key="genres">
-            <option value="">All Genres</option>
-            <option value="action">Action</option>
-            <option value="adventure">Adventure</option>
-            <option value="animation">Animation</option>
-            <option value="biography">Biography</option>
-            <option value="comedy">Comedy</option>
-            <option value="crime">Crime</option>
-            <option value="drama">Drama</option>
-            <option value="fantasy">Fantasy</option>
-            <option value="history">History</option>
-            <option value="sci-fi">Sci-Fi</option>
-          </select>
-
-          <select class="filter-select" id="filter-countries" data-filter-key="countries">
-            <option value="">All Countries</option>
-            <option value="usa">USA</option>
-            <option value="uk">UK</option>
-            <option value="russia">Russia</option>
-            <option value="korea">Korea</option>
-            <option value="turkey">Turkey</option>
-          </select>
-
-          <select class="filter-select" id="filter-years" data-filter-key="year">
-            <option value="">All Years</option>
-            <option value="2025">2025</option>
-            <option value="2024">2024</option>
-            <option value="2020s">2020 - 2029</option>
-            <option value="2010s">2010 - 2019</option>
-            <option value="2000s">2000 - 2009</option>
-          </select>
-
-          <select class="filter-select" id="filter-rating" data-filter-key="rating">
-            <option value="">Any Rating</option>
-            <option value="9+">9+</option>
-            <option value="8+">8+</option>
-            <option value="7+">7+</option>
-            <option value="6+">6+</option>
-          </select>
-        </div>
-
-        <button id="reset-filters-btn">Reset Filters</button>
-
-        <div class="active-filters-section">
-          <strong>Active filters:</strong>
-          <div id="active-filters-display">
-            <span id="no-filters-msg" style="color:#6c757d;">No filters selected.</span>
+  <main class="container">
+    <section class="home-section content-wrapper">
+      <!-- Popular Movies -->
+      <h2>Popular Movies</h2>
+      <div class="cards-container">
+        <div class="home-card hover-preview-card" data-preview="images/avenger.mp4">
+          <div class="poster-wrap">
+            <img class="poster" src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame" />
+            <video class="preview" muted playsinline preload="none"></video>
           </div>
+          <h3>Avengers: Endgame</h3>
         </div>
-      </section>
 
-      <div class="cards-container" id="movies-list">
-
-    
-        <div class="media-card rateable-card"
-             data-movie-id="avengers-endgame"
-             data-genres="action,adventure,sci-fi"
-             data-countries="usa"
-             data-year="2010s"
-             data-imdb-rating="8.4">
-          <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame">
-          <div>
-            <h3>Avengers: Endgame (2019)</h3>
-            <p><b>Director:</b> Anthony & Joe Russo</p>
-            <p><b>Genre:</b> Action, Adventure, Sci-Fi</p>
-            <p><b>Plot:</b> After the snap of Thanos, the Avengers must reunite to save everyone.</p>
-            <p><b>IMDb Rating:</b> ⭐ 8.4/10</p>
-            <div class="user-rating">
-              <span class="star" data-value="1">★</span>
-              <span class="star" data-value="2">★</span>
-              <span class="star" data-value="3">★</span>
-              <span class="star" data-value="4">★</span>
-              <span class="star" data-value="5">★</span>
-            </div>
-            <p class="rating-message">Click a star to rate!</p>
+        <div class="home-card hover-preview-card" data-preview="images/dun.mp4">
+          <div class="poster-wrap">
+            <img class="poster" src="https://beam-images.warnermediacdn.com/2024-10/Dune_Prophecy_HO-OM_MAIN_30x30.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com" alt="Dune" />
+            <video class="preview" muted playsinline preload="none"></video>
           </div>
+          <h3>Dune</h3>
         </div>
 
-        <div class="media-card rateable-card"
-             data-movie-id="dune"
-             data-genres="adventure,drama,sci-fi"
-             data-countries="usa"
-             data-year="2020s"
-             data-imdb-rating="8.0">
-          <img src="https://miro.medium.com/v2/resize:fit:736/1*lxJt3ijMD20kPvLtv_wkxw.jpeg" alt="Dune">
-          <div>
-            <h3>Dune (2021)</h3>
-            <p><b>Director:</b> Denis Villeneuve</p>
-            <p><b>Genre:</b> Adventure, Drama, Sci-Fi</p>
-            <p><b>Plot:</b> Paul Atreides must survive on the desert planet Arrakis.</p>
-            <p><b>IMDb Rating:</b> ⭐ 8.0/10</p>
-            <div class="user-rating">
-              <span class="star" data-value="1">★</span>
-              <span class="star" data-value="2">★</span>
-              <span class="star" data-value="3">★</span>
-              <span class="star" data-value="4">★</span>
-              <span class="star" data-value="5">★</span>
-            </div>
-            <p class="rating-message">Click a star to rate!</p>
+        <div class="home-card hover-preview-card" data-preview="images/open.mp4">
+          <div class="poster-wrap">
+            <img class="poster" src="https://cdn-images-3.listennotes.com/podcasts/talking-talkies/oppenheimer-savior-or-GtE3CnZV5Nc-yBla_-9tjgn.1400x1400.jpg" alt="Oppenheimer" />
+            <video class="preview" muted playsinline preload="none"></video>
           </div>
+          <h3>Oppenheimer</h3>
         </div>
-
-        <div class="media-card rateable-card"
-             data-movie-id="oppenheimer"
-             data-genres="biography,drama,history"
-             data-countries="usa,uk"
-             data-year="2020s"
-             data-imdb-rating="8.6">
-          <img src="https://cdn-images-3.listennotes.com/podcasts/talking-talkies/oppenheimer-savior-or-GtE3CnZV5Nc-yBla_-9tjgn.1400x1400.jpg" alt="Oppenheimer">
-          <div>
-            <h3>Oppenheimer (2023)</h3>
-            <p><b>Director:</b> Christopher Nolan</p>
-            <p><b>Genre:</b> Biography, Drama, History</p>
-            <p><b>Plot:</b> The story of J. Robert Oppenheimer and the atomic bomb.</p>
-            <p><b>IMDb Rating:</b> ⭐ 8.6/10</p>
-            <div class="user-rating">
-              <span class="star" data-value="1">★</span>
-              <span class="star" data-value="2">★</span>
-              <span class="star" data-value="3">★</span>
-              <span class="star" data-value="4">★</span>
-              <span class="star" data-value="5">★</span>
-            </div>
-            <p class="rating-message">Click a star to rate!</p>
-          </div>
-        </div>
-
-        <div class="media-card rateable-card"
-             data-movie-id="spider-man"
-             data-genres="animation,action,adventure"
-             data-countries="usa"
-             data-year="2020s"
-             data-imdb-rating="8.7">
-          <img src="https://avatars.mds.yandex.net/i?id=1c8f589b8867a0641f2f3ce362a2a952031de2f0-5273802-images-thumbs&n=13" alt="Spider-Man: Across the Spider-Verse">
-          <div>
-            <h3>Spider-Man: Across the Spider-Verse (2023)</h3>
-            <p><b>Director:</b> Joaquim Dos Santos, Kemp Powers, Justin K. Thompson</p>
-            <p><b>Genre:</b> Animation, Action, Adventure</p>
-            <p><b>Plot:</b> Miles Morales travels across the multiverse to face a new threat.</p>
-            <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
-            <div class="user-rating">
-              <span class="star" data-value="1">★</span>
-              <span class="star" data-value="2">★</span>
-              <span class="star" data-value="3">★</span>
-              <span class="star" data-value="4">★</span>
-              <span class="star" data-value="5">★</span>
-            </div>
-            <p class="rating-message">Click a star to rate!</p>
-          </div>
-        </div>
-
-        <div class="media-card rateable-card"
-             data-movie-id="interstellar"
-             data-genres="adventure,drama,sci-fi"
-             data-countries="usa,uk"
-             data-year="2010s"
-             data-imdb-rating="8.7">
-          <img src="https://avatars.mds.yandex.net/i?id=8553d56d5fa542343440de431772b735924e05e9-16921443-images-thumbs&n=13" alt="Interstellar">
-          <div>
-            <h3>Interstellar (2014)</h3>
-            <p><b>Director:</b> Christopher Nolan</p>
-            <p><b>Genre:</b> Adventure, Drama, Sci-Fi</p>
-            <p><b>Plot:</b> Astronauts travel through a wormhole to save humanity.</p>
-            <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
-            <div class="user-rating">
-              <span class="star" data-value="1">★</span>
-              <span class="star" data-value="2">★</span>
-              <span class="star" data-value="3">★</span>
-              <span class="star" data-value="4">★</span>
-              <span class="star" data-value="5">★</span>
-            </div>
-            <p class="rating-message">Click a star to rate!</p>
-          </div>
-        </div>
-
-        <div class="media-card rateable-card"
-             data-movie-id="dark-knight"
-             data-genres="action,crime,drama"
-             data-countries="usa,uk"
-             data-year="2000s"
-             data-imdb-rating="9.0">
-          <img src="https://avatars.mds.yandex.net/i?id=2123585a90a69b292e3bed6b13f95199f40fa11a-5236263-images-thumbs&n=13" alt="The Dark Knight">
-          <div>
-            <h3>The Dark Knight (2008)</h3>
-            <p><b>Director:</b> Christopher Nolan
-
-            <p><b>Genre:</b> Action, Crime, Drama</p>
-            <p><b>Plot:</b> Batman faces the Joker, who terrorizes Gotham City.</p>
-            <p><b>IMDb Rating:</b> ⭐ 9.0/10</p>
-            <div class="user-rating">
-              <span class="star" data-value="1">★</span>
-              <span class="star" data-value="2">★</span>
-              <span class="star" data-value="3">★</span>
-              <span class="star" data-value="4">★</span>
-              <span class="star" data-value="5">★</span>
-            </div>
-            <p class="rating-message">Click a star to rate!</p>
-          </div>
-        </div>
-
       </div>
 
-      <footer>
-        Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva
-      </footer>
+      <!-- Popular Series -->
+      <h2>Popular Series</h2>
+      <div class="cards-container">
+        <div class="home-card hover-preview-card" data-preview="images/stranger.mp4">
+          <div class="poster-wrap">
+            <img class="poster" src="https://upload.wikimedia.org/wikipedia/ru/f/f7/Stranger_Things_season_2.jpg" alt="Stranger Things" />
+            <video class="preview" muted playsinline preload="none"></video>
+          </div>
+          <h3>Stranger Things</h3>
+        </div>
+
+        <div class="home-card hover-preview-card" data-preview="images/game.mp4">
+          <div class="poster-wrap">
+            <img class="poster" src="https://avatars.mds.yandex.net/i?id=a1fe7340327511ab49421742736d8d91_l-5294324-images-thumbs&n=13" alt="Game of Thrones" />
+            <video class="preview" muted playsinline preload="none"></video>
+          </div>
+          <h3>Game of Thrones</h3>
+        </div>
+
+        <div class="home-card hover-preview-card" data-preview="images/wednes.mp4">
+          <div class="poster-wrap">
+            <img class="poster" src="https://avatars.mds.yandex.net/i?id=8f173048a66a26082906a2ebb70c0bfc_l-10384973-images-thumbs&n=13" alt="Wednesday" />
+            <video class="preview" muted playsinline preload="none"></video>
+          </div>
+          <h3>Wednesday</h3>
+        </div>
+      </div>
+
+      <!-- Popular Cartoons -->
+      <h2>Popular Cartoons</h2>
+      <div class="cards-container">
+        <div class="home-card hover-preview-card" data-preview="images/toys.mp4">
+          <div class="poster-wrap">
+            <img class="poster" src="https://lumiere-a.akamaihd.net/v1/images/p_toystory_19639_424d94a0.jpeg?region=0%2C0%2C540%2C810" alt="Toy Story" />
+            <video class="preview" muted playsinline preload="none"></video>
+          </div>
+          <h3>Toy Story</h3>
+        </div>
+
+        <div class="home-card hover-preview-card" data-preview="images/soul.mp4">
+          <div class="poster-wrap">
+            <img class="poster" src="https://play-lh.googleusercontent.com/YovlpWlhzPFOsVZ5ZJT8WUynnhjyMMi05IaaV1a5st3s8nJZ2xD67zjysih3BWIEHBBTfvlNpweDKXSfdeI=w480-h960" alt="Soul" />
+            <video class="preview" muted playsinline preload="none"></video>
+          </div>
+          <h3>Soul</h3>
+        </div>
+
+        <div class="home-card hover-preview-card" data-preview="images/inter.mp4">
+          <div class="poster-wrap">
+            <img class="poster" src="https://avatars.mds.yandex.net/i?id=88abb8b89b7b6b9d45a22fea1eecb3eb_l-8341432-images-thumbs&n=13" alt="Ralph breaks the internet" />
+            <video class="preview" muted playsinline preload="none"></video>
+          </div>
+          <h3>Ralph breaks the Internet</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
+  </footer>
+
+  <!-- Modal Section -->
+  <div id="accessModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+
+      <!-- Register Panel -->
+      <div class="form-wrapper" id="registerPanel">
+        <h3>Sign Up</h3>
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" name="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="regPassword">Password (Min 8 chars):</label>
+            <input type="password" id="regPassword" name="password" />
+          </div>
+
+          <div class="form-group">
+            <label for="regConfirmPassword">Confirm Password:</label>
+            <input type="password" id="regConfirmPassword" name="confirmPassword" />
+          </div>
+
+          <button type="submit" id="regSubmitBtn">Register</button>
+        </form>
+      </div>
+
+      <!-- Login Panel -->
+      <div class="form-wrapper" id="loginPanel" style="display: none;">
+        <h3>Log In</h3>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="logEmail">Email:</label>
+            <input type="email" id="logEmail" name="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="logPassword">Password:</label>
+            <input type="password" id="logPassword" name="password" />
+          </div>
+
+          <button type="submit" id="logSubmitBtn">Log In</button>
+        </form>
+      </div>
     </div>
   </div>
 
-   <script src="rating.js"></script>
+  <!-- Scripts -->
+  <script src="accordion.js"></script>
+  <script src="access.js"></script>
+  <script src="popup.js"></script>
   <script src="backgroundColor.js"></script>
   <script src="keyboardNav.js"></script>
-  <script src="filtering.js"></script>
   <script src="sounds.js"></script>
+  <script src="hoverPreview.js"></script>
 </body>
 </html>

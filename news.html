@@ -9,6 +9,7 @@
 </head>
 <body>
 <button id="color-switcher-btn">🎨</button>
+
 <header>
     <div class="photo">
         <img src="images/photo_5391366760864806989_y.jpg" alt="MyFlix Logo" class="logo">
@@ -17,7 +18,7 @@
         <a href="index.html">Home</a>
         <a href="movies.html">Movies</a>
         <a href="series.html">Series</a>
-        <a href="cartoons.html" >Cartoons</a>
+        <a href="cartoons.html">Cartoons</a>
         <a href="news.html" class="active">News</a>
         <a href="contact.html">Contact</a>
     </div>
@@ -25,10 +26,18 @@
 
 <div class="container">
     <div class="main">
+
+        <!-- Контейнер для поиска новостей с автоподсказками -->
+        <div class="search-container" style="position: relative;">
+            <input type="text" id="newsSearch" placeholder="Search news..." autocomplete="off" />
+            <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+        </div>
+
         <div class="main-header-wrapper">
             <h2 class="news-title">Latest Movie & Actor News</h2>
             <span id="currentDateTime" class="datetime-display"></span>
         </div>
+
         <div class="news-list" id="news-container">
             <div class="media-card">
                 <img src="images/spider.jpg" alt="Spider man">
@@ -43,11 +52,11 @@
                 <div>
                     <h3>Tron: Ares Coming in 2025</h3>
                     <p>The highly anticipated <em>Tron: Ares</em> will premiere on October 10, 2025, starring Jared Leto, Greta Lee, and Evan Peters.
-                        <a href="https://en.wikipedia.org/wiki/Tron%3A_Ares" target="_blank">Read more</a></p>
+                        <a href="https://en.wikipedia.org/wiki/Tron:Ares" target="_blank">Read more</a></p>
                 </div>
             </div>
         </div>
-        
+
         <div class="load-more-container">
             <button id="load-more-btn">Read more</button>
         </div>
@@ -63,5 +72,7 @@
 <script src="loadMoreNews.js"></script>
 <script src="keyboardNav.js"></script>
 <script src="sounds.js"></script>
+<script src="newsAutocomplete.js"></script>
+
 </body>
 </html>
