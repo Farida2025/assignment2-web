@@ -930,7 +930,7 @@ footer {
   max-width: 300px; /* можно подогнать размер */
   background-color: #1c1c1c;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: auto;
   text-align: center;
 }
 #progressContainer {
@@ -970,4 +970,54 @@ footer {
   font-size: 1.2rem;
   color: #555;
 }
+
+/* Кнопка "Copy link" */
+.copy-btn {
+    margin-top: 10px;          
+    padding: 8px 15px;        
+    background-color: red;      
+    color: white;               
+    border: none;              
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;            
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s; 
+}
+
+.copy-btn:hover {
+    background-color: darkred; 
+    transform: translateY(-2px); 
+}
+
+.copy-btn:focus {
+    outline: 2px solid white;   
+    outline-offset: 2px;
+}
+
+
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 

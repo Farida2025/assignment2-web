@@ -1,0 +1,26 @@
+function showToast(message, duration = 3000) {
+  const container = document.getElementById('toast-container');
+  
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  
+  container.appendChild(toast);
+  
+  // Показываем уведомление
+  setTimeout(() => toast.classList.add('show'), 100);
+  
+  // Убираем через duration
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 500);
+  }, duration);
+}
+
+// Добавляем обработчик для кнопок "Add to Favorites"
+document.querySelectorAll('.favorite-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const seriesName = btn.closest('.series-card').querySelector('h3').textContent;
+    showToast(`${seriesName} added to favorites!`);
+  });
+});

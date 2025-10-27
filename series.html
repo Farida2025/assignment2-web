@@ -10,9 +10,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-  <div id="progressContainer">
+   <div id="progressContainer">
     <div id="progressBar"></div>
   </div>
+  <div id="toast-container"></div>
+
   <button id="color-switcher-btn">🎨</button>
 
   <header>
@@ -89,6 +91,8 @@
       </section>
 
       <div class="series-list" id="series-list">
+
+        <!-- Stranger Things -->
         <div class="series-card rateable-card"
              data-series-id="stranger-things"
              data-genres="drama,fantasy"
@@ -101,7 +105,8 @@
             <p><b>Years:</b> 2016 – present</p>
             <p><b>Actors:</b> Millie Bobby Brown, Finn Wolfhard, David Harbour</p>
             <p><b>Plot:</b> Kids in Hawkins face supernatural threats from the Upside Down.</p>
-            <p><b>IMDb Rating:</b> ⭐ 8.7/10</p>
+            <p><b>IMDb Rating:</b> ⭐️ 8.7/10</p>
+            
             <div class="user-rating">
               <span class="star" data-value="1">★</span>
               <span class="star" data-value="2">★</span>
@@ -110,9 +115,13 @@
               <span class="star" data-value="5">★</span>
             </div>
             <p class="rating-message">Click a star to rate!</p>
+            <button class="favorite-btn">Add to Favorites</button>
+
           </div>
+          
         </div>
 
+        <!-- Game of Thrones -->
         <div class="series-card rateable-card"
              data-series-id="game-of-thrones"
              data-genres="drama,fantasy"
@@ -125,7 +134,7 @@
             <p><b>Years:</b> 2011 – 2019</p>
             <p><b>Actors:</b> Emilia Clarke, Kit Harington, Peter Dinklage</p>
             <p><b>Plot:</b> Noble families fight for the Iron Throne while facing betrayal, war, and an ancient enemy.</p>
-            <p><b>IMDb Rating:</b> ⭐ 9.2/10</p>
+            <p><b>IMDb Rating:</b> ⭐️ 9.2/10</p>
             <div class="user-rating">
               <span class="star" data-value="1">★</span>
               <span class="star" data-value="2">★</span>
@@ -134,9 +143,11 @@
               <span class="star" data-value="5">★</span>
             </div>
             <p class="rating-message">Click a star to rate!</p>
+            <button class="favorite-btn">Add to Favorites</button>
           </div>
         </div>
 
+        <!-- Wednesday -->
         <div class="series-card rateable-card"
              data-series-id="wednesday"
              data-genres="drama,fantasy"
@@ -149,7 +160,7 @@
             <p><b>Years:</b> 2022 – present</p>
             <p><b>Actors:</b> Jenna Ortega, Catherine Zeta-Jones, Luis Guzmán</p>
             <p><b>Plot:</b> Wednesday investigates murders at Nevermore Academy and discovers her psychic abilities.</p>
-            <p><b>IMDb Rating:</b> ⭐ 8.0/10</p>
+            <p><b>IMDb Rating:</b> ⭐️ 8.0/10</p>
             <div class="user-rating">
               <span class="star" data-value="1">★</span>
               <span class="star" data-value="2">★</span>
@@ -158,8 +169,10 @@
               <span class="star" data-value="5">★</span>
             </div>
             <p class="rating-message">Click a star to rate!</p>
+            <button class="favorite-btn">Add to Favorites</button>
           </div>
         </div>
+
       </div>
 
       <footer>
@@ -174,6 +187,7 @@
   <script src="filtering.js"></script>
   <script src="sounds.js"></script>
   <script src="progressBar.js"></script>
+  <script src="toast.js"></script>
 
 </body>
 </html>
