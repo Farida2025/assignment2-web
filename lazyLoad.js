@@ -1,20 +1,23 @@
 $(document).ready(function() {
+
     function lazyLoadImages() {
-        $('.lazy').each(function() {
-            var img = $(this);
-            if (img.offset().top < $(window).scrollTop() + $(window).height() + 100) {
-                // Загружаем изображение только если оно близко к видимой области
-                img.attr('src', img.data('src'));
-                img.removeClass('lazy');
+        $('.lazy-load').each(function() {
+            const $img = $(this);
+
+            if ($img.attr('src')) return;
+
+            const windowBottom = $(window).scrollTop() + $(window).height();
+            const imgTop = $img.offset().top;
+
+            if (imgTop < windowBottom + 100) {
+                $img.attr('src', $img.data('src')); 
+                $img.on('load', function() {
+                    $img.hide().fadeIn(1200); 
+                });
             }
         });
     }
 
-    // Выполняем при загрузке страницы
-    lazyLoadImages();
-
-    // Выполняем при скролле
-    $(window).on('scroll', function() {
-        lazyLoadImages();
-    });
+    $(window).on('scroll resize', lazyLoadImages);
+    lazyLoadImages(); 
 });

@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="filters.css" />
-  <!-- Подключение jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
@@ -99,7 +98,7 @@
              data-countries="usa"
              data-year="2010s,2020s"
              data-imdb-rating="8.7">
-          <img src="https://upload.wikimedia.org/wikipedia/ru/f/f7/Stranger_Things_season_2.jpg" alt="Stranger Things" />
+          <img class="lazy-load" data-src="https://upload.wikimedia.org/wikipedia/ru/f/f7/Stranger_Things_season_2.jpg" alt="Stranger Things" />
           <div class="series-info">
             <h3>Stranger Things</h3>
             <p><b>Years:</b> 2016 – present</p>
@@ -128,7 +127,7 @@
              data-countries="usa,uk"
              data-year="2010s"
              data-imdb-rating="9.2">
-          <img src="https://avatars.mds.yandex.net/i?id=a1fe7340327511ab49421742736d8d91_l-5294324-images-thumbs&n=13" alt="Game of Thrones" />
+          <img class="lazy-load" data-src="https://avatars.mds.yandex.net/i?id=a1fe7340327511ab49421742736d8d91_l-5294324-images-thumbs&n=13" alt="Game of Thrones" />
           <div class="series-info">
             <h3>Game of Thrones</h3>
             <p><b>Years:</b> 2011 – 2019</p>
@@ -154,7 +153,7 @@
              data-countries="usa"
              data-year="2020s"
              data-imdb-rating="8.0">
-          <img src="https://avatars.mds.yandex.net/i?id=8f173048a66a26082906a2ebb70c0bfc_l-10384973-images-thumbs&n=13" alt="Wednesday" />
+          <img class="lazy-load" data-src="https://avatars.mds.yandex.net/i?id=8f173048a66a26082906a2ebb70c0bfc_l-10384973-images-thumbs&n=13" alt="Wednesday" />
           <div class="series-info">
             <h3>Wednesday</h3>
             <p><b>Years:</b> 2022 – present</p>
@@ -188,6 +187,6 @@
   <script src="sounds.js"></script>
   <script src="progressBar.js"></script>
   <script src="toast.js"></script>
-
+  <script src="lazyLoad.js"></script>
 </body>
 </html>

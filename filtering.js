@@ -21,23 +21,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const allSelects = Array.from(filterSystem.querySelectorAll('.filter-select'));
   const searchInput = scope.querySelector('#movieSearch');
 
-  const list = scope.querySelector('#movies-list');
+  const list = scope.querySelector('#movies-list') || scope.querySelector('#cartoons-list') || scope.querySelector('#series-list');
   if (!list) return;
 
-  const cards = Array.from(list.querySelectorAll('.media-card'));
+  const cards = Array.from(list.querySelectorAll('.media-card, .series-card, .cartoon-card'));
   if (!cards.length) return;
 
   const currentFilters = {};
   const norm = (v) => (v ?? '').toString().trim().toLowerCase();
 
+  
   function normalizeYearFilter(raw) {
-    const v = norm(raw);
-    if (/^\d{4}$/.test(v)) {
-      const decade = Math.floor(parseInt(v, 10) / 10) * 10;
-      return `${decade}s`;
-    }
-    return v;
+  const v = (raw ?? '').toString().trim().toLowerCase();
+  if (/^\d{4}$/.test(v)) {
+    const decade = Math.floor(parseInt(v, 10) / 10) * 10;
+    return `${decade}s`;
   }
+  if (/^\d{4}s$/.test(v)) return v;
+
+  return v;
+}
+
 
   function applyFilters() {
     cards.forEach((card) => {

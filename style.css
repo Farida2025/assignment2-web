@@ -825,13 +825,11 @@ footer {
   text-align: center;
 }
 
-/* Контейнер для поиска */
 .search-container {
-  margin-bottom: 40px; /* пространство между поиском и фильтрами */
+  margin-bottom: 40px; 
   text-align: center;
 }
 
-/* Сам input поиска */
 #movieSearch {
   width: 80%;
   max-width: 500px;
@@ -849,9 +847,8 @@ footer {
   outline: none;
 }
 
-/* Поиск новостей */
 .search-container {
-    margin: 20px auto 40px auto; /* верх 20px, низ 40px */
+    margin: 20px auto 40px auto; 
     text-align: center;
 }
 
@@ -872,13 +869,12 @@ footer {
     outline: none;
 }
 
-/* Стиль для автоподсказок */
 .autocomplete-suggestions {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #fff; /* белый фон */
+    background-color: #fff; 
     border: 1px solid #ccc;
     z-index: 1000;
     max-height: 200px;
@@ -888,14 +884,13 @@ footer {
 .autocomplete-suggestion {
     padding: 8px;
     cursor: pointer;
-    color: #000; /* черный текст */
+    color: #000; 
 }
 
 .autocomplete-suggestion:hover {
     background-color: #f0f0f0;
 }
 
-/* Центрируем поиск */
 .faq-search-wrapper {
   display: flex;
   justify-content: center;
@@ -912,7 +907,6 @@ footer {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Подсветка текста */
 .highlight {
   background-color: yellow;
   color: black;
@@ -920,14 +914,14 @@ footer {
 
 .cards-container {
   display: flex;
-  justify-content: space-between; /* равномерное расстояние между карточками */
-  flex-wrap: wrap; /* чтобы карточки переносились на новую строку при необходимости */
-  gap: 20px; /* дополнительный отступ между карточками */
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+  gap: 20px; 
 }
 
 .home-card {
-  flex: 1 1 calc(33.333% - 20px); /* 3 карточки в ряд с учетом gap */
-  max-width: 300px; /* можно подогнать размер */
+  flex: 1 1 calc(33.333% - 20px); 
+  max-width: 300px; 
   background-color: #1c1c1c;
   border-radius: 10px;
   overflow: auto;
@@ -971,7 +965,6 @@ footer {
   color: #555;
 }
 
-/* Кнопка "Copy link" */
 .copy-btn {
     margin-top: 10px;          
     padding: 8px 15px;        

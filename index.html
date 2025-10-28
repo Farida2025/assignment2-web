@@ -5,9 +5,8 @@
   <title>MyFlix - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="faqHighlight.css" /> <!-- Подсветка поиска FAQ -->
+  <link rel="stylesheet" href="faqHighlight.css" />
 
-  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </head>
@@ -42,7 +41,7 @@
       <div class="cards-container">
         <div class="home-card hover-preview-card" data-preview="images/avenger.mp4">
           <div class="poster-wrap">
-            <img class="poster lazy" data-src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame" />
+            <img class="poster" src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame" />
             <video class="preview" muted playsinline preload="none"></video>
           </div>
           <h3>Avengers: Endgame</h3>
@@ -121,12 +120,10 @@
     Group Members: Alua Sagyndyk, Altynay Bolatova, Farida Dovletbaeva — 2025 MyFlix
   </footer>
 
-  <!-- Modal Section -->
   <div id="accessModal" class="modal">
     <div class="modal-content">
       <span class="close-button">&times;</span>
 
-      <!-- Register Panel -->
       <div class="form-wrapper" id="registerPanel">
         <h3>Sign Up</h3>
         <form id="registrationForm">
@@ -158,7 +155,6 @@
         </p>
       </div>
 
-      <!-- Login Panel -->
       <div class="form-wrapper" id="loginPanel" style="display: none;">
         <h3>Log In</h3>
         <form id="loginForm">
@@ -186,7 +182,6 @@
     </div>
   </div>
 
-  <!-- Scripts -->
   <script src="accordion.js"></script>
   <script src="access.js"></script>
   <script src="popup.js"></script>
@@ -196,7 +191,6 @@
   <script src="hoverPreview.js"></script>
   <script src="faqHighlight.js"></script> 
   <script src="progressBar.js"></script>
-  <script src="lazyLoad.js"></script>
 
 </body>
 </html>

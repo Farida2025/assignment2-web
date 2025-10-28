@@ -6,13 +6,14 @@
   <title>MyFlix - Movies</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="filters.css" />
-  <!-- Подключение jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   <div id="progressContainer">
     <div id="progressBar"></div>
   </div>
+  <div id="toast-container"></div>
+
 
   <button id="color-switcher-btn">🎨</button>
 
@@ -97,7 +98,7 @@
              data-countries="usa"
              data-year="2010s"
              data-imdb-rating="8.4">
-          <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame">
+          <img class="lazy-load" data-src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Avengers_Endgame_poster.jpg/640px-Avengers_Endgame_poster.jpg" alt="Avengers Endgame">
           <div>
             <h3>Avengers: Endgame (2019)</h3>
             <p><b>Director:</b> Anthony & Joe Russo</p>
@@ -112,6 +113,7 @@
               <span class="star" data-value="5">★</span>
             </div>
             <p class="rating-message">Click a star to rate!</p>
+            <button class="favorite-btn">Add to Favorites</button>
           </div>
         </div>
 
@@ -121,7 +123,7 @@
              data-countries="usa"
              data-year="2020s"
              data-imdb-rating="8.0">
-          <img src="https://miro.medium.com/v2/resize:fit:736/1*lxJt3ijMD20kPvLtv_wkxw.jpeg" alt="Dune">
+          <img class="lazy-load" data-src="https://miro.medium.com/v2/resize:fit:736/1*lxJt3ijMD20kPvLtv_wkxw.jpeg" alt="Dune">
           <div>
             <h3>Dune (2021)</h3>
             <p><b>Director:</b> Denis Villeneuve</p>
@@ -136,6 +138,7 @@
               <span class="star" data-value="5">★</span>
             </div>
             <p class="rating-message">Click a star to rate!</p>
+            <button class="favorite-btn">Add to Favorites</button>
           </div>
         </div>
 
@@ -145,7 +148,7 @@
              data-countries="usa,uk"
              data-year="2020s"
              data-imdb-rating="8.6">
-          <img src="https://cdn-images-3.listennotes.com/podcasts/talking-talkies/oppenheimer-savior-or-GtE3CnZV5Nc-yBla_-9tjgn.1400x1400.jpg" alt="Oppenheimer">
+          <img class="lazy-load" data-src="https://cdn-images-3.listennotes.com/podcasts/talking-talkies/oppenheimer-savior-or-GtE3CnZV5Nc-yBla_-9tjgn.1400x1400.jpg" alt="Oppenheimer">
           <div>
             <h3>Oppenheimer (2023)</h3>
             <p><b>Director:</b> Christopher Nolan</p>
@@ -160,6 +163,7 @@
               <span class="star" data-value="5">★</span>
             </div>
             <p class="rating-message">Click a star to rate!</p>
+            <button class="favorite-btn">Add to Favorites</button>
           </div>
         </div>
 
@@ -169,7 +173,7 @@
              data-countries="usa"
              data-year="2020s"
              data-imdb-rating="8.7">
-          <img src="https://avatars.mds.yandex.net/i?id=1c8f589b8867a0641f2f3ce362a2a952031de2f0-5273802-images-thumbs&n=13" alt="Spider-Man: Across the Spider-Verse">
+          <img class="lazy-load" data-src="https://avatars.mds.yandex.net/i?id=1c8f589b8867a0641f2f3ce362a2a952031de2f0-5273802-images-thumbs&n=13" alt="Spider-Man: Across the Spider-Verse">
           <div>
             <h3>Spider-Man: Across the Spider-Verse (2023)</h3>
             <p><b>Director:</b> Joaquim Dos Santos, Kemp Powers, Justin K. Thompson</p>
@@ -184,6 +188,7 @@
               <span class="star" data-value="5">★</span>
             </div>
             <p class="rating-message">Click a star to rate!</p>
+            <button class="favorite-btn">Add to Favorites</button>
           </div>
         </div>
 
@@ -193,7 +198,7 @@
              data-countries="usa,uk"
              data-year="2010s"
              data-imdb-rating="8.7">
-          <img src="https://avatars.mds.yandex.net/i?id=8553d56d5fa542343440de431772b735924e05e9-16921443-images-thumbs&n=13" alt="Interstellar">
+          <img class="lazy-load" data-class="lazy-load" data-src="https://avatars.mds.yandex.net/i?id=8553d56d5fa542343440de431772b735924e05e9-16921443-images-thumbs&n=13" alt="Interstellar">
           <div>
             <h3>Interstellar (2014)</h3>
             <p><b>Director:</b> Christopher Nolan</p>
@@ -208,6 +213,7 @@
               <span class="star" data-value="5">★</span>
             </div>
             <p class="rating-message">Click a star to rate!</p>
+            <button class="favorite-btn">Add to Favorites</button>
           </div>
         </div>
 
@@ -217,7 +223,7 @@
              data-countries="usa,uk"
              data-year="2000s"
              data-imdb-rating="9.0">
-          <img src="https://avatars.mds.yandex.net/i?id=2123585a90a69b292e3bed6b13f95199f40fa11a-5236263-images-thumbs&n=13" alt="The Dark Knight">
+          <img class="lazy-load" data-src="https://avatars.mds.yandex.net/i?id=2123585a90a69b292e3bed6b13f95199f40fa11a-5236263-images-thumbs&n=13" alt="The Dark Knight">
           <div>
             <h3>The Dark Knight (2008)</h3>
             <p><b>Director:</b> Christopher Nolan
@@ -233,6 +239,7 @@
               <span class="star" data-value="5">★</span>
             </div>
             <p class="rating-message">Click a star to rate!</p>
+            <button class="favorite-btn">Add to Favorites</button>
           </div>
         </div>
 
@@ -250,7 +257,7 @@
   <script src="filtering.js"></script>
   <script src="sounds.js"></script>
   <script src="progressBar.js"></script>
-<script src="lazyLoad.js"></script>
-
+  <script src="lazyLoad.js"></script>
+  <script src="toast.js"></script>
 </body>
 </html>

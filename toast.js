@@ -7,20 +7,17 @@ function showToast(message, duration = 3000) {
   
   container.appendChild(toast);
   
-  // Показываем уведомление
   setTimeout(() => toast.classList.add('show'), 100);
   
-  // Убираем через duration
   setTimeout(() => {
     toast.classList.remove('show');
     setTimeout(() => toast.remove(), 500);
   }, duration);
 }
 
-// Добавляем обработчик для кнопок "Add to Favorites"
 document.querySelectorAll('.favorite-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    const seriesName = btn.closest('.series-card').querySelector('h3').textContent;
-    showToast(`${seriesName} added to favorites!`);
+    const movieName = btn.closest('.media-card').querySelector('h3').textContent;
+    showToast(`${movieName} added to favorites!`);
   });
 });
