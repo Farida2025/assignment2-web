@@ -6,9 +6,8 @@ $(document).ready(function() {
             const originalText = $(this).text();
 
             if (searchTerm === '') {
-                $(this).html(originalText); // если пусто, убираем подсветку
+                $(this).html(originalText); 
             } else {
-                // Регулярное выражение для поиска слова, игнорируя регистр
                 const regex = new RegExp(`(${searchTerm})`, 'gi');
                 const newText = originalText.replace(regex, '<span class="highlight">$1</span>');
                 $(this).html(newText);

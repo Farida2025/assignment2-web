@@ -1,9 +1,8 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const datetimeElement = document.getElementById('currentDateTime');
 
     if (!datetimeElement) {
-        console.error("Элемент с ID 'currentDateTime' не найден.");
+        console.error("Element with ID 'currentDateTime' not found.");
         return;
     }
 
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             day: 'numeric',
             hour: '2-digit',
             minute: '2-digit',
-            hour12: true 
+            hour12: true
         };
 
         const formattedDate = now.toLocaleDateString('en-US', options);
@@ -23,5 +22,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateDateTime();
-    setInterval(updateDateTime, 60000); 
+    setInterval(updateDateTime, 60000);
 });
